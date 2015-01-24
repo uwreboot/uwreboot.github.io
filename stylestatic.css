@@ -1,0 +1,159 @@
+@font-face {
+	font-family: montserrat;
+	src: url("fonts/montserrat/Montserrat-Regular.otf");
+}
+body {
+ margin-top: 0px;
+ margin-right: 0px;
+ margin-bottom: 0px;
+ margin-left: 0px
+}
+.section {
+	position: static;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	min-width:500px;
+	height: 60vh;
+	display: table;
+	text-align: center;
+	font-family: montserrat;
+}
+#main{
+	background:url("images/main_banner_pic.jpg") no-repeat center center;
+	background-size: cover;
+	min-height: 70vh;
+}
+#main span {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 80px;
+	font-weight: bold;
+	color: #FFF;
+}
+#nav {
+	position:fixed;
+	top: 0px;
+	right:0px;
+	width: 100%;
+	height: 40px;
+	z-index: 3;
+}
+#navback{
+	position:fixed;
+	top: 0px;
+	right:0px;
+	width: 100%;
+	height: 40px;
+	background: rgba(0,0,0,1);
+	z-index:2;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+#nav a{
+	float: left;
+	color: white;
+	font-family: "Arial";
+	font-size: 30px;
+}
+#nav ul {
+	min-width:500px;
+}
+#nav ul li a{
+	font-size:20px;
+	color: white;
+	font-family:montserrat;
+	float: right;
+	text-decoration: none;
+	margin-right: 10px;
+	margin-top: 7px;
+}
+#about h1 {
+	padding-left: 10%;
+	padding-top:5%;
+	float:left;
+	font-family: montserrat;
+	font-size: 30;
+}
+#about p{
+	font-family: "Arial Narrow";
+	font-size: 20px;
+	width: 60%;
+}
+#projects {
+	background: #DDDDDD;
+}
+#projects h1{
+	font-family: montserrat;
+	font-size: 30px;
+}
+.fproject{
+	display:inline-block;
+	width:20%;
+	min-width: 200px;
+}
+.fproject  h3{
+	font-family:montserrat;
+	font-size:20px;
+}
+.fproject  p{
+	font-family: "Arial Narrow";
+	font-size:15px;
+}
+
+.fproject span div{
+	margin-left: auto;
+	margin-right: auto;
+	width:100px;
+	height:100px;
+	border:2px solid black;
+	border-radius: 100%;
+	text-align: center;
+}
+.fproject span div a{
+	font-family:"Arial";
+	font-weight:bold;
+	position: relative;
+	top: +40px
+}
+#team{
+	background:#111111;
+}
+#team h1 {
+	font-family:montserrat;
+	font-size: 30px;
+	color:white;
+}
+#team ul li{
+	display:inline-block;
+}
+#team ul li a{
+	display:block;
+	width: 150px;
+	height: 150px;
+	border: 3px solid white;
+	border-radius: 100%;
+
+}
+#team ul li h3,#team ul li p {
+	color:white;
+}
+#contact{
+	display:static;
+	width:100%;
+	min-height: 20px;
+	background: #0088FF;
+}
+
+#contact ul li{
+	width: 300px;
+	display:inline-block;
+	vertical-align: middle;
+	color: white;
+	font-size: 15px;
+	font-family: "Arial";
+	padding: 5px
+}
