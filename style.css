@@ -1,0 +1,202 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+/*
+body {
+	position: relative;
+}*/
+
+.home {
+	background:url(images/deskblur.jpg);
+	background-repeat: no-repeat;
+	background-position: 100%;
+	background-size: cover;
+	-moz-background-size:cover;
+    -webkit-background-size:cover;
+    -o-background-size:cover;
+    height: 800px;
+}
+
+header div {
+	text-align: center;
+}
+
+header div h1 {
+    margin: 0;
+    font-size: 17px;
+    padding-top: 543px;
+    color: white;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: 200;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+}
+
+header div h2 {
+    color: white;
+    font-family: 'Indie Flower', sans-serif;
+    font-size: 17px;
+    font-weight: 200;
+    letter-spacing: 7px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+nav {
+	position: fixed;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.95);
+	height: 60px;
+	z-index: 1;
+}
+
+/*nav a:hover {
+	float:left;
+    height: 38px;
+    margin-left: 22px;
+    margin-top: 10px;
+    display: block;
+} make this hover so that the logo becomes orange when you hover over it*/
+
+nav img {
+	float:left;
+    height: 38px;
+    margin-left: 22px;
+    margin-top: 10px;
+    display: block;
+}
+
+nav ul {
+	float:right;
+}
+
+img.logo {
+	/*margin: 100px;*/
+	width: 273px;
+	height: auto;
+	position: absolute;
+	/*the above line of code corresponds to position: relative in the body selector*/
+	top: 200px;
+	right: 550px;
+}
+
+header h1 {
+	text-align: center;
+
+}
+
+nav ul {
+    text-align: right;
+    margin: 20px;
+    margin-right: 15px;
+}
+
+nav ul li {
+	display: inline;
+	/*text-align: right;*/
+}
+
+nav ul li a {
+    color: #686B68;
+    text-decoration: none;
+    padding: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/*section.about {
+	background: linear-gradient(#179CA7,rgba(98, 163, 169, 0.93));
+	this hex code might work better #7393A9
+    height: 460px;
+}
+*/
+section.about {
+    background: linear-gradient(#FFFFFF,rgba(253, 250, 250, 0.93));
+    height: 528px;
+}
+
+/*section.about h1 {
+	color: white;
+	text-transform:uppercase;
+	font-family: 'Istok Web', sans-serif;
+	margin: 0;
+    font-size:25px;
+    font-weight: 200;
+    letter-spacing: 5px;
+    padding-top: 63px;
+    text-align: center;
+} alternate design*/
+
+section.about h1 {
+    color: #C1AAAA;
+    text-transform: uppercase;
+    font-family: 'Istok Web', sans-serif;
+    margin: 0;
+    font-size: 25px;
+    font-weight: 200;
+    letter-spacing: 5px;
+    padding-top: 63px;
+    text-align: center;
+}
+
+/*section.about h2 {
+    font-family: 'Nunito', sans-serif;
+    color: #EFEEEE;
+    font-weight: 100;
+    font-size: 17px;
+    margin-top: 31px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 23px;
+    padding-top: 35px;
+} alterate design*/
+
+section.about h2 {
+    font-family: 'Nunito', sans-serif;
+    color: #A29393;
+    font-weight: 100;
+    font-size: 17px;
+    margin-top: 31px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 23px;
+    padding-top: 35px;
+}
+
+/*.highlight1 {
+    color: #FFF9F4;
+    font-size: 28px;
+} alternate design*/
+
+.highlight1 {
+    color: #F3B27D;
+    font-size: 28px;
+}
+
+div {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+div img {
+	width: 100px;
+	margin-top: 45px;
+}
+
+div img:nth-child(odd) {
+	margin-left: 24px;
+	margin-right: 24px;
+}
+
+div img:first-child {
+	margin-left:0px;
+}
+
+/*the above line of code gets rid of the margin left on the*/
