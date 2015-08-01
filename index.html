@@ -3,9 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Reboot</title>
-	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="hover.css">
 	<link href='http://fonts.googleapis.com/css?family=Patrick+Hand|Indie+Flower|Istok+Web|Roboto+Condensed:300italic,400,300|Oxygen:400,300|Nunito:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="flickity-docs/flickity.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<header class="home" id="home">
@@ -13,10 +15,10 @@
 			<a href="#home"><img src="images/reboot.png"></a>
 			<ul>
 				<li><a class="hvr-pulse" href="index.html">Home</a></li>
-				<li><a class ="hvr-pulse"href="about.html">About Us</a></li>
-				<li><a class ="hvr-pulse"href="team.html">Meet the Team</a></li>
-				<li><a class ="hvr-pulse"href="join.html">Get Involved</a></li>
-				<li><a class ="hvr-pulse"href="blog.html">Blog</a></li>
+				<li><a class="hvr-pulse" href="about.html">About Us</a></li>
+				<li><a class="hvr-pulse" href="team.html">Meet the Team</a></li>
+				<li><a class="hvr-pulse" href="join.html">Get Involved</a></li>
+				<li><a class="hvr-pulse" href="blog.html">Blog</a></li>
 				<li><a class="hvr-pulse" href="contact.html">Contact</a></li>
 			</ul>
 		</nav>
@@ -27,37 +29,62 @@
 			<h1>Collaborate with all types of people</h1>
 			<br/>
 			<h2>Reboot the culture of creation.</h2>
-		
+			<a href="#aboutUs" class="hvr-sink"><i class="fa fa-chevron-down"></i></a>
 	</section>
 
 	<!---this is the about section-->
 
 	<section id="aboutUs" class="about">
-		<h1>About Us</h1>
-		<h2><span class="highlight1">reboot</span> is a one of a kind, inclusive and transdisciplinary club that aims to unite students from all faculties and programs. Each term, members apply their interests and skills to create unique projects in a collaborative setting. The projects are entirely based on the members’ interests, and will change each term. The club provides its members with the opportunity to learn new skills, and share the knowledge they already have, with students across UW.  We believe that the most creative ideas are fostered by collaboration. So what are you waiting for? Whether you are from Engineering, Health Sciences, Arts, Environment, Math or Science….join reboot to share what you know, learn new skills, make connections, and bring your craziest ideas to life! Join the movement.</h2>
-		<!--<div>
-			<a class="hvr-grow" href=""><img src="images/AHSicon.png"></a>
-			<a class="hvr-grow" href=""><img src="images/MATHicon.png"></a>
-			<a class="hvr-grow" href=""><img src="images/ENGicon.png"></a>
-			<a class="hvr-grow" href=""><img src="images/ENVicon.png"></a>
-			<a class="hvr-grow" href=""><img src="images/ARTSicon.png"></a>
-			<a class="hvr-grow" href=""><img src="images/SCIicon.png"></a>
-		</div>-->
-	</section>
-	<section class="more">
-		<div class="lInfo">
-		<h1>Learn More</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis scelerisque elit, non molestie enim. Quisque luctus risus est, ut dignissim leo faucibus eget. Sed congue et sem id molestie. Suspendisse condimentum ipsum sed lectus tempor, a pulvinar sem dapibus. Integer vitae odio et lorem porttitor consectetur. Sed vestibulum feugiat quam, eu dictum lectus sollicitudin eu. Vivamus rhoncus urna sed lacus maximus, vitae pellentesque lacus placerat. Etiam ac commodo massa. Sed in lorem at magna ultrices ultrices non ut odio. Vestibulum a nulla risus. Aliquam a augue sit amet lorem dictum hendrerit. Duis lorem lectus, lacinia gravida mauris ut, pretium maximus arcu. Maecenas tempor eu erat sit amet posuere. Quisque id vehicula metus, sit amet tincidunt massa. Ut sollicitudin eget odio vel pulvinar. Sed vulputate, tellus eu sagittis dictum, ex justo sollicitudin urna, a varius eros lorem in neque.</p> 
+		<h1>The Club</h1>
+		<h2>Creativity through collaboration; we’re a community of people working to prove that the best ideas come from sharing experiences. Our members grow together, learning from each other while taking part in hands-on projects that push them out of their comfort zone. Nobody is an expert in everything, but everyone is  skilled at something.
+		This is an opportunity to discover something new firsthand-- by doing it. This is where you learn something, you teach something, and together you create something amazing. It’s time to show that innovation and creativity go hand-in-hand. It’s time to unite those who want their ideas to become a reality. It’s time to reboot the culture of creation.</h2>
+		<div class="faculties">
+			<a class="hvr-grow" href="join.html"><img src="images/AHSicon.png"></a>
+			<a class="hvr-grow" href="join.html"><img src="images/MATHicon.png"></a>
+			<a class="hvr-grow" href="join.html"><img src="images/ENGicon.png"></a>
+			<a class="hvr-grow" href="join.html"><img src="images/ENVicon.png"></a>
+			<a class="hvr-grow" href="join.html"><img src="images/ARTSicon.png"></a>
+			<a class="hvr-grow" href="join.html"><img src="images/SCIicon.png"></a>
 		</div>
-		<div class="rInfo">
-			<ul> 
-				<li><button>Join our Newsletter</button></li>
-				<li><button>Join the Conversation on Slack</button></li>
-				<li><button>Apply for an Executive Position</button></li>
-				<li><button>Apply for a Directorship</button></li>	
-				<li><button>Check out our Facebook</button></li>	
-			</ul> 
-		</div> 
+		<section class="more">
+			<div class="rInfo">
+				<h1>What we do</h1>
+				<ul> 
+					<li><button>Stay Updated</button></li>
+					<li><button>Join the Team</button></li>
+					<li><button>Apply for a Directorship</button></li>		
+				</ul> 
+			</div> 
+		</section>
+		<div class="gallery js-flickity" data-flickity-options='{"wrapAround": "true" }'>
+		  	<div class="gallery-cell">
+		  		<img src="images/Ahmad.jpg">
+		  	</div>
+		  	<div class="gallery-cell">
+		  		<img src="images/sculpture.jpg">
+		  	</div>
+		  	<div class="gallery-cell">
+		  		<img src="images/prototyping.jpg">
+		  	</div>
+		  	<div class="gallery-cell">
+		  		<img src="images/manbun.jpg">
+		  	</div>
+		  	<div class="gallery-cell">
+		  		<img src="images/mindmap.jpg">
+		  	</div>
+		  	<div class="gallery-cell">
+		  		<img src="images/looking.jpg">
+		  	</div>
+		</div>
 	</section>
+	
+	<script src="jquery-2.1.3.min.js"></script> 
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="flickity-docs/flickity.pkgd.min.js"></script>
+	<script>
+		$(function() {
+
+		});
+	</script>
 </body>
 </html>

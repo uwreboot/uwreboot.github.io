@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Touch, responsive, flickable galleries">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Flickity &middot; Extras</title>
+
+    <link rel="stylesheet" href="css/flickity-docs.css" media="screen">
+
+</head>
+<body class="page--extras export">
+
+<nav class="site-nav">
+  <div class="content-wrap">
+    <ul class="site-nav__list">
+      <li class="site-nav__item site-nav__item--homepage"><a href=".">Flickity</a></li>
+      <li class="site-nav__item site-nav__item--style"><a href="style.html">Style</a></li>
+      <li class="site-nav__item site-nav__item--options"><a href="options.html">Options</a></li>
+      <li class="site-nav__item site-nav__item--api"><a href="api.html">API</a></li>
+      <li class="site-nav__item site-nav__item--extras"><a href="extras.html">Extras</a></li>
+      <li class="site-nav__item site-nav__item--license"><a href="license.html">License</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="main">
+  <div class="content-wrap">
+      <h1 class="page-title">Extras</h1>
+
+
+    <ul class="page-nav js-stickeroo">
+<li class="page-nav__item--h2"><a href="#custom-navigation-ui">Custom navigation UI</a></li>
+<li class="page-nav__item--h2"><a href="#extra-demos">Extra demos</a></li>
+<li class="page-nav__item--h2"><a href="#browser-support">Browser support</a></li>
+<li class="page-nav__item--h2"><a href="#requirejs">RequireJS</a></li>
+<li class="page-nav__item--h2"><a href="#browserify">Browserify</a></li>
+<li class="page-nav__item--h2"><a href="#issues">Issues</a></li>
+<li class="page-nav__item--h3"><a href="#reduced-test-cases">Reduced test cases</a></li>
+<li class="page-nav__item--h3"><a href="#submitting-issues">Submitting issues</a></li>
+<li class="page-nav__item--h3"><a href="#feature-requests">Feature requests</a></li>
+</ul>
+
+
+<h2 id="custom-navigation-ui">Custom navigation UI</h2>
+
+<p>With the <a href="api.html">Flickity API</a>, you can build custom gallery navigation UI.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+<pre><code class="js"><span class="comment">// init Flickity</span>
+<span class="keyword">var</span> <span class="jquery_var">$gallery</span> = $(<span class="string">'.gallery'</span>).flickity({
+  prevNextButtons: <span class="literal">false</span>,
+  pageDots: <span class="literal">false</span>
+});
+<span class="comment">// Flickity instance</span>
+<span class="keyword">var</span> <span class="flickity_var">flkty</span> = <span class="jquery_var">$gallery</span>.data(<span class="string">'flickity'</span>);
+<span class="comment">// elements</span>
+<span class="keyword">var</span> $cellButtonGroup = $(<span class="string">'.button-group--cells'</span>);
+<span class="keyword">var</span> $cellButtons = $cellButtonGroup.find(<span class="string">'.button'</span>);
+
+<span class="comment">// update selected cellButtons</span>
+<span class="jquery_var">$gallery</span>.on( <span class="string">'cellSelect'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>{
+  $cellButtons.filter(<span class="string">'.is-selected'</span>)
+    .removeClass(<span class="string">'is-selected'</span>);
+  $cellButtons.eq( <span class="flickity_var">flkty</span>.selectedIndex )
+    .addClass(<span class="string">'is-selected'</span>);
+});
+
+<span class="comment">// select cell on button click</span>
+$cellButtonGroup.on( <span class="string">'click'</span>, <span class="string">'.button'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>{
+  <span class="keyword">var</span> index = $(<span class="keyword">this</span>).index();
+  <span class="jquery_var">$gallery</span>.flickity( <span class="string">'select'</span>, index );
+});
+<span class="comment">// previous</span>
+$(<span class="string">'.button--previous'</span>).on( <span class="string">'click'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>{
+  <span class="jquery_var">$gallery</span>.flickity(<span class="string">'previous'</span>);
+});
+<span class="comment">// next</span>
+$(<span class="string">'.button--next'</span>).on( <span class="string">'click'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>{
+  <span class="jquery_var">$gallery</span>.flickity(<span class="string">'next'</span>);
+});
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell" data-js-module="custom-nav">
+    <div class="gallery">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+    <div class="button-row button-row--centered">
+      <button class="button button--previous">&larr;</button>
+      <div class="button-group button-group--cells button-group--inline">
+        <button class="button is-selected">1</button>
+        <button class="button">2</button>
+        <button class="button">3</button>
+        <button class="button">4</button>
+        <button class="button">5</button>
+      </div>
+      <button class="button button--next">&rarr;</button>
+    </div>
+    <p class="edit-demo">
+        <a href="http://codepen.io/desandro/pen/jEZwxb">Edit this demo</a>
+        or <a href="http://codepen.io/desandro/pen/emVRjv">vanilla JS demo</a> on CodePen
+    </p>
+  </div>
+</div>
+
+
+<h2 id="extra-demos">Extra demos</h2>
+
+<ul>
+  <li><a href="http://codepen.io/desandro/details/jEpxqJ/">Image gallery with fancy selected style</a></li>
+  <li>
+    <a href="http://codepen.io/desandro/pen/dPdVNM">Setting image caption</a> or
+    <a href="http://codepen.io/desandro/pen/OPQxpO">with vanilla JS</a>
+  </li>
+  <li>
+    <a href="http://codepen.io/desandro/pen/pvxONO">Select cell on staticClick</a> or
+    <a href="http://codepen.io/desandro/pen/OPBoWx">with vanilla JS</a>
+  </li>
+  <li>
+    <a href="http://codepen.io/desandro/pen/VYVEbM">Set initial focus on Flickity gallery</a> or
+    <a href="http://codepen.io/desandro/pen/JoemRR">with vanilla JS</a>,
+    so that gallery can be keyboard navigated on initial page load
+  </li>
+  <li><a href="http://codepen.io/desandro/pen/LVVqBR">Previous &amp; next buttons in top right corner</a></li>
+</ul>
+
+
+<h2 id="browser-support">Browser support</h2>
+
+<p>Flickity supports IE8+, Android 2.3+, iOS Safari 5+, and all modern browsers.</p>
+
+
+<h2 id="requirejs">RequireJS</h2>
+
+<p>Flickity supports <a href="http://requirejs.org/">RequireJS</a>.</p>
+
+<p>You can require <code>flickity.pkgd.js</code>.</p>
+
+<pre><code class="js">requirejs( [
+  <span class="string">'path/to/flickity.pkgd.js'</span>,
+], <span class="function"><span class="keyword">function</span><span class="params">( Flickity )</span> </span>{
+  <span class="keyword">var</span> <span class="flickity">flickity</span> = <span class="keyword">new</span> <span class="flickity">Flickity</span>( <span class="string">'.gallery'</span>, {...});
+});
+</code></pre>
+
+<p>To use Flickity as a jQuery plugin with RequireJS and flickity.pkgd.js, you need to call jQuery Bridget.</p>
+
+<pre><code class="js"><span class="comment">// require the require function</span>
+requirejs( [ <span class="string">'require'</span>, <span class="string">'jquery'</span>, <span class="string">'path/to/flickity.pkgd.js'</span> ],
+  <span class="function"><span class="keyword">function</span><span class="params">( require, $, Flickity )</span> </span>{
+    <span class="comment">// require jquery-bridget, it's included in flickity.pkgd.js</span>
+    <span class="built_in">require</span>( [ <span class="string">'jquery-bridget/jquery.bridget'</span> ],
+    <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>{
+      <span class="comment">// make Flickity a jQuery plugin</span>
+      $.bridget( <span class="string">'flickity'</span>, <span class="flickity">Flickity</span> );
+      <span class="comment">// now you can use $().flickity()</span>
+      $(<span class="string">'.gallery'</span>).flickity({...});
+    }
+  );
+});
+</code></pre>
+
+<p>Or, you can manage dependencies with <a href="http://bower.io">Bower</a>. Set <code>baseUrl: <span class="string">"bower_components/"</span></code> and set a config path for all your application code.</p>
+
+<pre><code class="js">requirejs.config({
+  baseUrl: <span class="string">'bower_components/'</span>,
+  paths: {
+    app: <span class="string">'../'</span>
+  }
+});
+
+requirejs( [
+  <span class="string">'flickity/js/index'</span>,
+  <span class="string">'app/my-component.js'</span>
+], <span class="function"><span class="keyword">function</span><span class="params">( Flickity, myComp )</span> </span>{
+  <span class="keyword">var</span> iso = <span class="keyword">new</span> <span class="flickity">Flickity</span>( <span class="string">'.gallery'</span>, {...});
+});
+</code></pre>
+
+<p>You can require Bower dependencies and use Isotope as a jQuery plugin with jQuery Bridget.</p>
+
+<pre><code class="js">requirejs.config({
+  baseUrl: <span class="string">'../bower_components'</span>,
+  paths: {
+    jquery: <span class="string">'jquery/jquery'</span>
+  }
+});
+
+requirejs( [
+    <span class="string">'jquery'</span>,
+    <span class="string">'flickity/js/index'</span>,
+    <span class="string">'jquery-bridget/jquery.bridget'</span>
+  ],
+  <span class="function"><span class="keyword">function</span><span class="params">( $, Flickity )</span> </span>{
+    <span class="comment">// make Flickity a jQuery plugin</span>
+    $.bridget( <span class="string">'flickity'</span>, <span class="flickity">Flickity</span> );
+    <span class="comment">// now you can use $().flickity()</span>
+    $(<span class="string">'.gallery'</span>).flickity({...});
+});
+</code></pre>
+
+<p>As a stand-alone package, Flickity does not include <code>imagesLoaded</code> and <code>asNavFor</code> code. You can require these packages separately.</p>
+
+<pre><code class="js">requirejs( [
+    <span class="string">'flickity-imagesloaded/flickity-imagesloaded'</span>,
+    <span class="string">'flickity-as-nav-for/as-nav-for'</span>
+  ],
+  <span class="function"><span class="keyword">function</span><span class="params">( Flickity )</span> </span>{
+    <span class="comment">// now use imagesLoaded and asNavFor</span>
+    <span class="keyword">var</span> <span class="flickity_var">flkty</span> = <span class="keyword">new</span> <span class="flickity">Flickity</span>( <span class="string">'.gallery-a'</span>, {
+      imagesLoaded: <span class="literal">true</span>,
+      asNavFor: <span class="string">'.gallery-b'</span>
+    });
+});
+</code></pre>
+
+
+<h2 id="browserify">Browserify</h2>
+
+<p>Flickity works with <a href="http://browserify.org/">Browserify</a>. Install <a href="https://www.npmjs.com/package/flickity">Flickity with npm</a>.</p>
+
+<pre><code class="bash">npm install flickity
+</code></pre>
+
+<pre><code class="js"><span class="keyword">var</span> <span class="flickity">Flickity</span> = <span class="built_in">require</span>(<span class="string">'flickity'</span>);
+
+<span class="keyword">var</span> <span class="flickity">flickity</span> = <span class="keyword">new</span> <span class="flickity">Flickity</span>( <span class="string">'.gallery'</span>, {
+  <span class="comment">// options</span>
+});
+</code></pre>
+
+<p>To use Flickity as a jQuery plugin with Browserify, you need to call <a href="https://www.npmjs.com/package/jquery-bridget">jQuery Bridget</a>.</p>
+
+<pre><code class="bash">npm install jquery-bridget
+</code></pre>
+
+<pre><code class="js"><span class="keyword">var</span> $ = <span class="built_in">require</span>(<span class="string">'jquery'</span>);
+<span class="built_in">require</span>(<span class="string">'jquery-bridget'</span>);
+<span class="keyword">var</span> <span class="flickity">Flickity</span> = <span class="built_in">require</span>(<span class="string">'flickity'</span>);
+
+<span class="comment">// make Flickity a jQuery plugin</span>
+$.bridget( <span class="string">'flickity'</span>, <span class="flickity">Flickity</span> );
+<span class="comment">// now you can use $().flickity()</span>
+$(<span class="string">'.gallery'</span>).flickity({...});
+</code></pre>
+
+<p>As a stand-alone package, Flickity does not include <code>imagesLoaded</code> and <code>asNavFor</code> code. You can install and require the <a href="https://www.npmjs.com/package/flickity-imagesloaded"><code>flickity-imagesloaded</code></a> and <a href="https://www.npmjs.com/package/flickity-as-nav-for"><code>flickity-as-nav-for</code></a> packages separately.</p>
+
+<pre><code class="bash">npm install flickity-imagesloaded
+npm install flickity-as-nav-for
+</code></pre>
+
+<pre><code class="js"><span class="keyword">var</span> <span class="flickity">Flickity</span> = <span class="built_in">require</span>(<span class="string">'flickity-imagesloaded'</span>);
+<span class="built_in">require</span>(<span class="string">'flickity-as-nav-for'</span>);
+
+<span class="comment">// now use imagesLoaded and asNavFor</span>
+<span class="keyword">var</span> <span class="flickity_var">flkty</span> = <span class="keyword">new</span> <span class="flickity">Flickity</span>( <span class="string">'.gallery-a'</span>, {
+  imagesLoaded: <span class="literal">true</span>,
+  asNavFor: <span class="string">'.gallery-b'</span>
+});
+</code></pre>
+
+
+<h2 id="issues">Issues</h2>
+
+<h3 id="reduced-test-cases">Reduced test cases</h3>
+
+<p>Creating a reduced test case is the best way to debug problems and report issues. Read <a href="http://css-tricks.com/reduced-test-cases/">CSS Tricks</a> on why they&rsquo;re so great.</p>
+
+<p>Create a reduced test case for Flickity by forking any one of the <a href="http://codepen.io/desandro/tag/flickity-docs">CodePen demos</a> from these docs.</p>
+
+<ul>
+  <li>A reduced test case clearly demonstrates the bug or issue.</li>
+  <li>It contains the bare minimum HTML, CSS, and JavaScript required to demonstrate the bug.</li>
+  <li>A link to your production site is <b>not</b> a reduced test case.</li>
+</ul>
+
+<p>Creating a reduced test case is the best way to get your issue addressed. They help you point out the problem. They help us debug the problem. They help others understand the problem.</p>
+
+
+<h3 id="submitting-issues">Submitting issues</h3>
+
+<p>Report <a href="https://github.com/metafizzy/flickity/issues/">issues on GitHub</a>. Make sure to include a <strong>reduced test case</strong>. Without a reduced test case, your issue may be closed.</p>
+
+
+<h3 id="feature-requests">Feature requests</h3>
+
+<p>Help us select new features by looking over <a href="https://github.com/metafizzy/flickity/labels/feature%20request">requested features on the GitHub issue tracker</a> and adding your <strong>+1</strong> or subscribing to features you&rsquo;d like to see added.</p>
+
+  </div>
+</div>
+
+<nav class="site-nav">
+  <div class="content-wrap">
+    <ul class="site-nav__list">
+      <li class="site-nav__item site-nav__item--homepage"><a href=".">Flickity</a></li>
+      <li class="site-nav__item site-nav__item--style"><a href="style.html">Style</a></li>
+      <li class="site-nav__item site-nav__item--options"><a href="options.html">Options</a></li>
+      <li class="site-nav__item site-nav__item--api"><a href="api.html">API</a></li>
+      <li class="site-nav__item site-nav__item--extras"><a href="extras.html">Extras</a></li>
+      <li class="site-nav__item site-nav__item--license"><a href="license.html">License</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="site-footer">
+  <div class="content-wrap">
+    <p class="site-footer__made-by">Metafizzy makes delightful web UI. Also made by Metafizzy:</p>
+
+    <div class="duo other-products">
+      <div class="duo__cell other-products__cell other-products__cell--isotope">
+        <a href="http://isotope.metafizzy.co/">
+          <img src="http://i.imgur.com/xfGupRf.png" alt="Isotope">
+          <h3>Isotope</h3>
+          <p class="description">Filter &amp; sort magical layouts</p>
+        </a>
+      </div>
+
+      <div class="duo__cell other-products__cell other-products__cell--packery">
+        <a href="http://packery.metafizzy.co/">
+          <img src="http://i.imgur.com/uRXPQfm.png" alt="Packery">
+          <h3>Packery</h3>
+          <p class="description">Gap-less, draggable, bin-packing layout library</p>
+        </a>
+      </div>
+    </div>
+
+    <p class="site-footer__follow">Follow <a href="https://twitter.com/metafizzyco">@metafizzyco on Twitter for Flickity updates</a>.</p>
+
+    <p class="site-footer__help">Help improve these docs.
+      <a href="https://github.com/metafizzy/flickity-docs/issues/">Open an issue</a> or
+      <a href="https://github.com/metafizzy/flickity-docs/blob/master/content/extras.mustache">pull request</a>.</p>
+
+  </div> 
+</div> 
+
+  <script src="js/flickity-docs.min.js"></script>
+
+
+</body>
+</html>

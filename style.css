@@ -58,10 +58,10 @@ nav ul {
 
 
 
-.splash  h1 {
+.splash h1 {
     margin: auto;
-    font-size: 17px;
-    padding-top: 543px;
+    font-size: 20px;
+    padding-top: 524px;
     color: white;
     font-family: 'Istok Web', sans-serif;
     font-weight: 200;
@@ -80,6 +80,12 @@ nav ul {
     text-transform: uppercase;
 }
 
+i.fa.fa-chevron-down {
+    font-size: 38px;
+    padding-top: 44px;
+    color: white;
+}
+
 
 .logo {
 	/*margin: 100px;*/
@@ -87,7 +93,7 @@ nav ul {
 	width: 273px;
 	height: auto;
     position:absolute;
-    top:245px;
+    top: 225px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -131,7 +137,7 @@ nav ul li a {
 */
 section.about {
     background: linear-gradient(#FFFFFF,rgba(253, 250, 250, 0.93));
-    
+    padding-bottom: 170px;
 }
 
 /*section.about h1 {
@@ -176,16 +182,28 @@ section.about h2 {
     font-weight: 100;
     font-size: 17px;
     margin-top: 31px;
-    max-width: 900px;
+    max-width: 868px;
     margin: 0 auto;
     line-height: 23px;
     padding-top: 35px;
-    padding-bottom:75px;
-    padding-left:50px;
-    padding-right:50px;
-
+    padding-bottom: 75px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: justify;
+}
+section.about div.faculties {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 80px;
 }
 
+section.about div.faculties img {
+    border: 0;
+    width: 100px;
+    height: 100px;
+    margin: 0px 13px;
+}
 
 /*.highlight1 {
     color: #FFF9F4;
@@ -214,10 +232,11 @@ section.about h2 {
     text-align:left;
         min-width:200px;
 }
-.rInfo{
-    width:30%;
-        min-width:300px;
+.rInfo {
+    width: 60%;
+    min-width: 300px;
 }
+
 .more .lInfo h1{
     font-family: 'Istok Web', sans-serif;
     color:#CCCCCC;
@@ -240,9 +259,11 @@ button{
     min-width:200px;
 }
 
-.rInfo ul li{
-    margin:25px;
+.rInfo ul li {
+    margin: 25px;
+    display: inline;
 }
+
 body{
     background:url(images/deskblur.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -255,7 +276,15 @@ body{
     top:60px;
     width:100%;
 }
-.main .wrapper .about{
+
+body.join {
+    background:url(images/meeting.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/*.main .wrapper .about{
     position:absolute;
     top:15vh;
     margin-left:0%;
@@ -265,11 +294,11 @@ body{
     background-color: rgba(255,255,255,0.7);
     border-radius:0px;
 }
-.about img{
-    float:right;
-    padding:20px;
-    width:200px;
-    height:200px;
+.about img {
+    float: right;
+    padding: 0px;
+    width: 100px;
+  height: 100px;
 }
 .about *{
     padding:10px;
@@ -286,7 +315,39 @@ font-family: 'Nunito', sans-serif;
     color: #A29393;
     font-weight: 100;
     font-size: 17px;
+}*/
+
+/*Emily's code for about section can be seen below*/
+
+div.wrapper {
+    text-align: center;
 }
+
+div.Lcontent {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+div.Lcontent h1 {
+    margin: 0px;
+    font-family: 'Istok Web', sans-serif;
+    color: white;
+    text-transform: uppercase;
+}
+
+div.Lcontent p {
+    font-family: 'Nunito', sans-serif;
+    color: #FFF;
+}
+
+div.Lcontent img {
+    width: 100%;
+    padding-top: 10%;
+}
+
+/*-------------------------------------------------*/
+
 .title{
     text-align: center;
     width:100%;
