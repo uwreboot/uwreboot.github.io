@@ -38,7 +38,7 @@ section{
 nav {
     position: fixed;
     width: 100%;
-    box-shadow:0px 1px 6px #A29393;
+    box-shadow:0px 1px 3px #A29393;
     background-color: rgba(255, 255, 255, 0.95);
     height: 60px;
     z-index: 1;
@@ -346,8 +346,22 @@ section.footer h1{
         margin-bottom:20px;
 }
 
-body{
+.mainbg{
     background:url(images/deskblur.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.joinbg{
+    background:url(images/bg/get_involved.jpeg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.aboutbg{
+    background:url(images/bg/about_us.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -359,39 +373,53 @@ body{
     width:100%;
 }
 
-body.join {
-    background:url(images/meeting.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 div.wrapper {
     text-align: center;
 }
-
+div.space{
+    height:150px;
+}
+div.space h1{
+    position:relative;
+    top:100px;
+    color:white;
+    font-family:"Istok Web";
+    letter-spacing: 17px;
+    color:#FFF;
+}
 div.Lcontent {
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
-    padding-top: 80px;
+    margin-top: 40px;
+    margin-bottom:40px;
+    padding:20px;
+    background-color: rgba(255,255,255,0);
+    color:#FFF;
+
 }
 
 div.Lcontent h1 {
     margin: 0px;
     font-family: 'Istok Web', sans-serif;
-    color: white;
+
     text-transform: uppercase;
 }
 
 div.Lcontent p {
     font-family: 'Nunito', sans-serif;
-    color: #FFF;
+    max-width:600px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: justify;
+
 }
 
 div.Lcontent img {
     width: 100%;
     padding-top: 10%;
+}
+div.Lcontent p:last-child{
+    text-align: center;
 }
 .title{
     text-align: center;
@@ -409,10 +437,11 @@ div.Lcontent img {
     margin:0px;
 }
 .teamDiv{
+    display:inline-block;
     font-family: 'Istok Web', sans-serif;
-        margin-bottom:20px;
-        max-width:1000px;
-        margin:auto;
+     margin-bottom:20px;
+   /* max-width:1000px;*/
+    margin:auto;
     font-style:normal;
     text-align: center;
     color:#555;
@@ -438,45 +467,19 @@ div.Lcontent img {
 }
 
 .teamList li{
+    display:inline-block;
     background-color:rgba(255,255,255,0.9);
     padding:10px;
     border-radius:0px;
-    margin-top:25px;
-    margin-bottom:25px;
-  
-    margin-left:auto;
-    margin-right:auto;
+        margin-top:2px;
+        margin-bottom:2px;
+        margin-left:auto;
+        margin-right:auto;
 }
 .teamList li img{
     width:100px;
     height:100px;
     border-radius:50%;
-}
-   .teamList li.Marketing{
-    /*    border-width:0px;
-    border-left-width:0px;
-    border-top-width:20px;
-    border-style:solid;
-    border-color: rgba(237,39,147,0.9);
-    /**/
-}
-    .teamList li.Software{/*
-        border-width:0px;
-    border-right-width:20px;
-    border-style:solid;
-    border-color*/ background-color:rgba(181,191,52,0.9);
-}
-        .teamList li.Logistics{/*
-        border-width:0px;
-    border-left-width:20px;
-    border-style:solid;
-    border-color*/background-color:rgba(21,115,186,0.9)
-}
-        .teamList li.Finance{
-     /*  border-width:0px;
-    border-right-width:20px;
-    border-style:solid;
-    border-color*/background-color:rgba(232,133,36,0.9);
 }
 
 .post{
@@ -512,4 +515,62 @@ div.Lcontent img {
     text-align: right;
     font-size:12pt;
     color:#CBB;
+}
+
+.col{
+    width:30%;
+    margin:1%;
+    display:inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding:20px;
+    min-width: 300px;
+    background-color: rgba(255,255,255,0.8)
+}
+.col h1{
+        margin: auto;
+    font-size: 20px;
+    color: #A29393;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: 200;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+}
+.col h2{
+    font-size: 10px;
+    color: #A29393;
+    font-family: 'Istok Web', sans-serif;
+}
+.col h4{
+    font-family: "Nunito", sans-serif;
+    color: #A29393;
+    font-size: 20 px;
+}
+.col p{
+    font-family: "Istok Web",sans-serif;
+    color:#A29393;
+    font-size: 15px;
+}
+.thumb-cal{
+    width:100px;
+    height:100px;
+    margin:auto;
+    border-color:#A29393;
+    border-style: solid;
+    border-width:2px;
+    border-radius:20px;
+    color:#A29393;
+    font-family: "Nunito", sans-serif;
+}
+.thumb-cal p{
+    margin:0px;
+    padding:0px;
+    vertical-align: middle;
+}
+.thumb-cal p:first-child{
+    text-transform: uppercase;
+    font-size: 15px;
+}
+.thumb-cal p:last-child{
+    font-size:40px;
 }
