@@ -17,6 +17,9 @@ body {
     --pink-color:rgba(237,39,147,1);
 
 }
+a{
+    text-decoration: none;
+}
 ul{
     text-decoration: none;
     list-style: none;
@@ -35,10 +38,7 @@ section{
 nav {
     position: fixed;
     width: 100%;
-    border-style:solid;
-    border-color:#A29393;
-    border-width:0px;
-    border-bottom-width: 1px;
+    box-shadow:0px 1px 6px #A29393;
     background-color: rgba(255, 255, 255, 0.95);
     height: 60px;
     z-index: 1;
@@ -153,7 +153,12 @@ nav ul li a {
     padding-top: 63px;
     text-align: center;
 } alternate design*/
-
+.anchor{
+    display:block;
+    visibility: hidden;
+    position:relative;
+    top:-60px;
+}
 section.about {
     background: #FFFFFF;
     padding-bottom:30px;
@@ -182,7 +187,7 @@ section.about h1 {
     padding-top: 35px;
 } alterate design*/
 
-section.about h2,section.more h2 {
+section.about h2,section.more h2, section.footer h2 {
     font-family: 'Nunito', sans-serif;
     font-weight: 100;
     font-size: 17px;
@@ -199,6 +204,13 @@ section.about h2,section.more h2 {
 section.about h2{
     color:#A29393;
 }
+section.footer h2{
+    text-align: center;
+    padding:0px;
+    margin-top:5px;
+    margin-bottom:5px;
+    color:#A29393;
+    }
 section.more h2{
     color:white;
 }
@@ -225,28 +237,21 @@ section.about div.faculties img {
     font-size: 28px;
 }
 section.more{
+
         overflow:auto;
     text-align: center;
     background-color:#A29393;
-}
-section.more .grad{
-width:100%;
-height:80px;
-    background: -webkit-linear-gradient(#FFF, #A29393); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#FFF, #A29393); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#FFF, #A29393); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#FFF, #A29393); /* Standard syntax */
 }
 .more h1{
         color: #FFF;
     text-transform: uppercase;
     font-family: 'Istok Web', sans-serif;
-    margin: 0;
+    margin-top: 40px;
     font-size: 25px;
     font-weight: 200;
     letter-spacing: 5px;
         text-align: center;
-        margin-bottom:20px;
+        margin-bottom:10px;
 }
 .info{
     margin-left:auto;
@@ -273,36 +278,72 @@ height:80px;
     width:20%;
     min-width:200px;
 }
-.info li:nth-child(1) button:hover{
-    background-color:rgba(87,45,136,0.9);
+.info li:nth-child(1) button:hover, .info li:nth-child(1) .active{
+    background-color:rgba(87,45,136,1);
 }
-.info li:nth-child(2) button:hover{
-    background-color:rgba(181,191,52,0.9);
+.info li:nth-child(2) button:hover, .info li:nth-child(2) .active{
+    background-color:rgba(181,191,52,1);
 }
-.info li:nth-child(3) button:hover{
+.info li:nth-child(3) button:hover, .info li:nth-child(3) .active{
     background-color:rgba(237,39,147,1);
 }
-.info li:nth-child(1) .active{
-    background-color:rgba(87,45,136,0.9);
+.info .purple{
+    font-weight:bold;
+   color: rgba(87,45,136,1);
 }
-.info li:nth-child(2) .active{
-    background-color:rgba(181,191,52,0.9);
+.info .green{
+    font-weight:bold;
+   color: rgba(181,191,52,1);
 }
-.info li:nth-child(3) .active{
-    background-color:rgba(237,39,147,1);
+.info .pink{
+    font-weight:bold;
+   color: rgba(237,39,147,1);
 }
-.info h2.active{
+.info div.active{
     display:static;
 }
-.info h2.inactive{
+.info div.inactive{
     display:none;
 }
-
+.info div h2{
+    padding-top:35px;
+    padding-bottom:10px;
+}
+.info div h2.emp{
+    padding-top:10px;
+    text-align: center;
+    padding-bottom:10px;
+}
 
 .info ul li {
     margin: 25px;
     display: inline-block;
-
+}
+section.gal{
+    padding-bottom:40px;
+    background-color:#A29393;
+}
+section.footer{
+    background: #FFF;
+    text-align: center;
+    padding:20px;
+}
+section.footer img{
+    position:inline;
+    margin:auto;
+    width:auto;
+    height:50px;
+}
+section.footer h1{
+            color:  #A29393;
+    text-transform: uppercase;
+    font-family: 'Istok Web', sans-serif;
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 200;
+    letter-spacing: 5px;
+        text-align: center;
+        margin-bottom:20px;
 }
 
 body{
@@ -374,7 +415,7 @@ div.Lcontent img {
         margin:auto;
     font-style:normal;
     text-align: center;
-    color:#555;#AAA
+    color:#555;
 }
 
 .teamlist h1{

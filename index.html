@@ -33,8 +33,8 @@
 	</section>
 
 	<!---this is the about section-->
-
-	<section id="aboutUs" class="about">
+	<a id = "aboutUs" class="anchor"></a>
+	<section class="about">
 		<h1>The Club</h1>
 		<h2>Creativity through collaboration; we’re a community of people working to prove that the best ideas come from sharing experiences. Our members grow together, learning from each other while taking part in hands-on projects that push them out of their comfort zone. Nobody is an expert in everything, but everyone is  skilled at something.
 		This is an opportunity to discover something new firsthand-- by doing it. This is where you learn something, you teach something, and together you create something amazing. It’s time to show that innovation and creativity go hand-in-hand. It’s time to unite those who want their ideas to become a reality. It’s time to reboot the culture of creation.</h2>
@@ -48,14 +48,12 @@
 		</div>
 		</section>
 		<section class="more">
-		<div class="grad">
-		</div>
 			<div class="info">
 				<h1>What we do</h1>
 				<ul>
-					<li><button class="active" onclick="activate(this,'one')">Creative<br/> Prototyping</button></li>
-					<li><button class ="inactive" onclick="activate(this,'two')">Mentors &amp <br/> Workshops</button></li>
-					<li><button class="inactive" onclick="activate(this,'three')">Company <br/> Visits</button></li>
+					<li class="hvr-grow"><button class="active" onclick="activate(this,'one')">Creative<br/> Prototyping</button></li>
+					<li class="hvr-grow"><button class ="inactive" onclick="activate(this,'two')">Mentors &amp <br/> Workshops</button></li>
+					<li class="hvr-grow"><button class="inactive" onclick="activate(this,'three')">Company <br/> Visits</button></li>
 					<script>
 						function activate(ele,parid){
 							var x =document.getElementsByClassName("active");
@@ -73,20 +71,28 @@
 						}
 					</script>		
 				</ul> 
-				<h2 class = "active" id ="one">
-				We’ll give you some materials, tools, and a space to use them in. You’ve got your experience and your know-how, but you’ve also got an awesome group of people around you to learn from. Together, by sharing your skills, you’ve got two hours to design, create, and build something awesome; hands-on learning at its finest. Let’s see what this club can come up with. 
-				Have an idea for a cool project? Make it come to life by letting us know.
+				<div id ="one" class = "active">
+				<h2>We’ll give you some materials, tools, and a space to use them in. You’ve got your experience and your know-how, but you’ve also got an awesome group of people around you to learn from. Together, by sharing your skills, you’ve got two hours to design, create, and build something awesome; hands-on learning at its finest. Let’s see what this club can come up with.	</h2>
+				<h2 class ="emp">Have an idea for a cool project? Make it come to life by <a href="mailto:president@reboot.build?subject=Creative Project Idea" class = "purple"> letting us know.</a></h2>
+				</div>
+				<div id ="two" class ="inactive">
+				<h2>
+				reboot hosts interactive workshops with different mentors monthly; as a member, you have exclusive access to a community of innovative thinkers, entrepreneurs, and companies. We, along with our partners, offer members an opportunity to engage with and learn from role models from different disciplines in unique and collaborative environments in the area.
+				</h2><h2 class ="emp">
+				Want to have your say? <a href="mailto:outreach@reboot.build?subject=Becoming a Mentor" class = "green"> Become a mentor.</a>
+				</h2></div>
+				<div id ="three" class ="inactive">
+				<h2>
+				Sometimes stepping out of your comfort zone is something that you do literally. With that in mind, reboot members have the chance to step off campus throughout the term and take part in club visits to different innovative and creative companies in the Waterloo area. 
 				</h2>
-				<h2 class ="inactive" id ="two">
-				reboot hosts interactive workshops with different mentors monthly; as a member, you have exclusive access to a community of innovative thinkers, entrepreneurs, and companies. We, along with our partners, offer members an opportunity to engage with and learn from role models from different disciplines in unique and collaborative environments in the area. Want to have your say? Become a mentor.
+				<h2 class ="emp">
+				Do you have a place in mind that you’d like to check out? <br/> <a href="mailto:vplogistics@reboot.build?subject=Company Visit" class = "pink"> Send us a suggestion</a> and we’ll see what we can do!
 				</h2>
-				<h2 class ="inactive" id = "three">
-				Sometimes stepping out of your comfort zone is something that you do literally. With that in mind, reboot members have the chance to step off campus throughout the term and take part in club visits to different innovative and creative companies in the Waterloo area. Do you have a place in mind that you’d like to check out? Send us a suggestion and we’ll see what we can do!
-				</h2>
+				</div>
 			</div> 
 		</section>
 
-		<section class="gallerysection">
+		<section class="gal">
 		<div class="gallery js-flickity" data-flickity-options='{"wrapAround": "true" }'>
 		  	<div class="gallery-cell">
 		  		<img src="images/Ahmad.jpg">
@@ -106,16 +112,23 @@
 		  	<div class="gallery-cell">
 		  		<img src="images/looking.jpg">
 		  	</div>
-		</div>
-	</section>
-	
-	<script src="jquery-2.1.3.min.js"></script> 
+		  				<script src="jquery-2.1.3.min.js"></script> 
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="flickity-docs/flickity.pkgd.min.js"></script>
-	<script>
-		$(function() {
+		</div>
 
-		});
-	</script>
+	</section>
+	<section class = "footer">
+	<h1> Our Supporters </h1>
+<img src ="images/supporters/engsoc.png">
+<img src ="images/supporters/logo-p1.png">
+<img src ="images/supporters/logo.jpg">
+		<img src ="images/supporters/uwaterloo.png">
+		<h2>Special Thanks To:</h2>
+		<h2>Nasser Abukhdeir | Suhash Aravindan | Grace So | The RigidWare Team <h2>
+	</section>
+	
+
+
 </body>
 </html>
