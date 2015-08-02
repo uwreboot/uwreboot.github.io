@@ -184,7 +184,6 @@ section.about h1 {
 
 section.about h2,section.more h2 {
     font-family: 'Nunito', sans-serif;
-    color: white;
     font-weight: 100;
     font-size: 17px;
     margin-top: 31px;
@@ -196,6 +195,12 @@ section.about h2,section.more h2 {
     padding-left: 50px;
     padding-right: 50px;
     text-align: justify;
+}
+section.about h2{
+    color:#A29393;
+}
+section.more h2{
+    color:white;
 }
 section.about div.faculties {
     text-align: center;
