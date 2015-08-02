@@ -328,6 +328,12 @@ section.footer{
     text-align: center;
     padding:20px;
 }
+section.footer2{
+    margin-top: 20px;
+}
+section.footer2 h1{
+    margin-bottom: 10px !important;
+}
 section.footer img{
     position:inline;
     margin:auto;
@@ -380,28 +386,25 @@ div.space{
     height:150px;
 }
 div.space h1{
-    position:relative;
-    top:100px;
-    color:white;
-    font-family:"Istok Web";
-    letter-spacing: 17px;
-    color:#FFF;
+
 }
 div.Lcontent {
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 40px;
     margin-bottom:40px;
     padding:20px;
-    background-color: rgba(255,255,255,0);
+    background-color: rgba(0,0,0,0);
     color:#FFF;
 
 }
 
 div.Lcontent h1 {
-    margin: 0px;
-    font-family: 'Istok Web', sans-serif;
-
+    position:relative;
+    color:white;
+    font-family:"Istok Web";
+    letter-spacing: 17px;
+    color:#FFF;
     text-transform: uppercase;
 }
 
@@ -425,7 +428,9 @@ div.Lcontent p:last-child{
     text-align: center;
     width:100%;
     color:white;
-    font-family: 'Indie Flower', sans-serif;
+    font-family: 'Istok Web', sans-serif;
+    letter-spacing: 7px;
+    text-transform: uppercase;
    font-size:20px;
     margin-left:auto;
     margin-right:auto;
@@ -450,6 +455,8 @@ div.Lcontent p:last-child{
 .teamlist h1{
     font-size:18pt;
     font-weight:normal ;
+    text-transform: uppercase;
+    letter-spacing: 5px;
 }
 .teamlist h2{
     font-size:16pt;
@@ -465,16 +472,20 @@ div.Lcontent p:last-child{
     font-size:12pt;
     font-weight:lighter;
 }
-
+.teamList li a{
+    color:#555;
+}
 .teamList li{
     display:inline-block;
-    background-color:rgba(255,255,255,0.9);
+    background-color:rgba(255,255,255,0.8);
     padding:10px;
     border-radius:0px;
-        margin-top:2px;
-        margin-bottom:2px;
-        margin-left:auto;
-        margin-right:auto;
+    margin:15px;
+    padding:25px;
+    width:40%;
+    vertical-align: top;
+    height:350px;
+    min-width: 300px;
 }
 .teamList li img{
     width:100px;
@@ -537,8 +548,9 @@ div.Lcontent p:last-child{
     text-transform: uppercase;
 }
 .col h2{
-    font-size: 10px;
+    font-size: 15px;
     color: #A29393;
+    font-weight: normal;
     font-family: 'Istok Web', sans-serif;
 }
 .col h4{
@@ -552,6 +564,7 @@ div.Lcontent p:last-child{
     font-size: 15px;
 }
 .thumb-cal{
+    padding:13px;
     width:100px;
     height:100px;
     margin:auto;
