@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Reboot</title>
+	<title>reboot</title>
 	<link rel="stylesheet" href="hover.css">
 	<link href='http://fonts.googleapis.com/css?family=Patrick+Hand|Indie+Flower|Istok+Web|Roboto+Condensed:300italic,400,300|Oxygen:400,300|Nunito:400,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
@@ -46,16 +46,47 @@
 			<a class="hvr-grow" href="join.html"><img src="images/ARTSicon.png"></a>
 			<a class="hvr-grow" href="join.html"><img src="images/SCIicon.png"></a>
 		</div>
+		</section>
 		<section class="more">
-			<div class="rInfo">
+		<div class="grad">
+		</div>
+			<div class="info">
 				<h1>What we do</h1>
-				<ul> 
-					<li><button>Stay Updated</button></li>
-					<li><button>Join the Team</button></li>
-					<li><button>Apply for a Directorship</button></li>		
+				<ul>
+					<li><button class="active" onclick="activate(this,'one')">Creative Prototyping</button></li>
+					<li><button class ="inactive" onclick="activate(this,'two')">Mentors &amp Workshops</button></li>
+					<li><button class="inactive" onclick="activate(this,'three')">Company Visits</button></li>
+					<script>
+						function activate(ele,parid){
+							var x =document.getElementsByClassName("active");
+							var i;
+
+							for (i = 0; i < x.length; i++) {
+    							x[i].className = "inactive";	
+    						}
+    						document.getElementById("one").className="inactive";
+    						document.getElementById("two").className="inactive";
+    						document.getElementById("three").className="inactive";
+    						var y =document.getElementById(parid);
+							y.className="active";
+							ele.className = "active"; 
+						}
+					</script>		
 				</ul> 
+				<h2 class = "active" id ="one">
+				We’ll give you some materials, tools, and a space to use them in. You’ve got your experience and your know-how, but you’ve also got an awesome group of people around you to learn from. Together, by sharing your skills, you’ve got two hours to design, create, and build something awesome; hands-on learning at its finest. Let’s see what this club can come up with. 
+				Have an idea for a cool project? Make it come to life by letting us know.
+				</h2>
+				<h2 class ="inactive" id ="two">
+				reboot hosts interactive workshops with different mentors monthly; as a member, you have exclusive access to a community of innovative thinkers, entrepreneurs, and companies. We, along with our partners, offer members an opportunity to engage with and learn from role models from different disciplines in unique and collaborative environments in the area. Want to have your say? Become a mentor.
+				</h2>
+				<h2 class ="inactive" id = "three">
+				Sometimes stepping out of your comfort zone is something that you do literally. With that in mind, reboot members have the chance to step off campus throughout the term and take part in club visits to different innovative and creative companies in the Waterloo area. Do you have a place in mind that you’d like to check out? Send us a suggestion and we’ll see what we can do!
+				</h2>
 			</div> 
 		</section>
+
+		<section class="gallerysection">
 		<div class="gallery js-flickity" data-flickity-options='{"wrapAround": "true" }'>
 		  	<div class="gallery-cell">
 		  		<img src="images/Ahmad.jpg">

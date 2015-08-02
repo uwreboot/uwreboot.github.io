@@ -8,6 +8,15 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 body {
 	position: relative;
 }*/
+:root{/*Just so we know the colors, also variables in firefox, chrome disabled css variables recently */
+    --green-color:rgba(181,191,52,0.9);
+    --blue-color:rgba(21,115,186,0.9);
+    --purple-color:rgba(87,45,136,0.9);
+    --orange-color:rgba(232,133,36,0.9);
+    --lblue-color:rgba(23,156,167,0.9);
+    --pink-color:rgba(237,39,147,1);
+
+}
 ul{
     text-decoration: none;
     list-style: none;
@@ -26,6 +35,10 @@ section{
 nav {
     position: fixed;
     width: 100%;
+    border-style:solid;
+    border-color:#A29393;
+    border-width:0px;
+    border-bottom-width: 1px;
     background-color: rgba(255, 255, 255, 0.95);
     height: 60px;
     z-index: 1;
@@ -129,17 +142,6 @@ nav ul li a {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-/*section.about {
-	background: linear-gradient(#179CA7,rgba(98, 163, 169, 0.93));
-	this hex code might work better #7393A9
-    height: 460px;
-}
-*/
-section.about {
-    background: linear-gradient(#FFFFFF,rgba(253, 250, 250, 0.93));
-    padding-bottom: 170px;
-}
-
 /*section.about h1 {
 	color: white;
 	text-transform:uppercase;
@@ -152,6 +154,10 @@ section.about {
     text-align: center;
 } alternate design*/
 
+section.about {
+    background: #FFFFFF;
+    padding-bottom:30px;
+}
 section.about h1 {
     color: #C1AAAA;
     text-transform: uppercase;
@@ -176,9 +182,9 @@ section.about h1 {
     padding-top: 35px;
 } alterate design*/
 
-section.about h2 {
+section.about h2,section.more h2 {
     font-family: 'Nunito', sans-serif;
-    color: #A29393;
+    color: white;
     font-weight: 100;
     font-size: 17px;
     margin-top: 31px;
@@ -186,7 +192,7 @@ section.about h2 {
     margin: 0 auto;
     line-height: 23px;
     padding-top: 35px;
-    padding-bottom: 75px;
+    padding-bottom: 40px;
     padding-left: 50px;
     padding-right: 50px;
     text-align: justify;
@@ -195,7 +201,6 @@ section.about div.faculties {
     text-align: center;
     width: 60%;
     margin: 0 auto;
-    padding-bottom: 80px;
 }
 
 section.about div.faculties img {
@@ -214,40 +219,45 @@ section.about div.faculties img {
     color: #F3B27D;
     font-size: 28px;
 }
-.more{
-    overflow:auto;
+section.more{
+        overflow:auto;
+    text-align: center;
     background-color:#A29393;
-    text-align: center
 }
-.lInfo,.rInfo{
-    margin:5%;
+section.more .grad{
+width:100%;
+height:80px;
+    background: -webkit-linear-gradient(#FFF, #A29393); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#FFF, #A29393); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#FFF, #A29393); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#FFF, #A29393); /* Standard syntax */
+}
+.more h1{
+        color: #FFF;
+    text-transform: uppercase;
+    font-family: 'Istok Web', sans-serif;
+    margin: 0;
+    font-size: 25px;
+    font-weight: 200;
+    letter-spacing: 5px;
+        text-align: center;
+        margin-bottom:20px;
+}
+.info{
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:5%;
     display:inline-block;
     vertical-align: middle;
-
-
-}
-.lInfo{
-    height:100%;
-    width:45%;
-    text-align:left;
-        min-width:200px;
-}
-.rInfo {
-    width: 60%;
-    min-width: 300px;
 }
 
-.more .lInfo h1{
-    font-family: 'Istok Web', sans-serif;
-    color:#CCCCCC;
-}.more .lInfo p{
-    font-family: 'Nunito', sans-serif;
-    color:#FFF;
+
+.info ul{
+    vertical-align: middle;
+    margin:auto;
+    list-style: none;
 }
-ul{
-    list-style: none
-}
-button{
+.info button{
     background-color:rgba(0,0,0,0);
     border-color:white;
     border-style:solid;
@@ -258,10 +268,36 @@ button{
     width:20%;
     min-width:200px;
 }
+.info li:nth-child(1) button:hover{
+    background-color:rgba(87,45,136,0.9);
+}
+.info li:nth-child(2) button:hover{
+    background-color:rgba(181,191,52,0.9);
+}
+.info li:nth-child(3) button:hover{
+    background-color:rgba(237,39,147,1);
+}
+.info li:nth-child(1) .active{
+    background-color:rgba(87,45,136,0.9);
+}
+.info li:nth-child(2) .active{
+    background-color:rgba(181,191,52,0.9);
+}
+.info li:nth-child(3) .active{
+    background-color:rgba(237,39,147,1);
+}
+.info h2.active{
+    display:static;
+}
+.info h2.inactive{
+    display:none;
+}
 
-.rInfo ul li {
+
+.info ul li {
     margin: 25px;
-    display: inline;
+    display: inline-block;
+
 }
 
 body{
@@ -284,40 +320,6 @@ body.join {
   -o-background-size: cover;
   background-size: cover;
 }
-/*.main .wrapper .about{
-    position:absolute;
-    top:15vh;
-    margin-left:0%;
-    margin-right:0%;
-    margin-bottom:10vh;
-    width:100%;
-    background-color: rgba(255,255,255,0.7);
-    border-radius:0px;
-}
-.about img {
-    float: right;
-    padding: 0px;
-    width: 100px;
-  height: 100px;
-}
-.about *{
-    padding:10px;
-}
-.about h1{
-    margin-bottom:0px;
-      font-family: 'Istok Web', sans-serif;
-    font-weight: 200;
-    letter-spacing: 7px;
-}
-.about p{
-    margin-top:0px;
-font-family: 'Nunito', sans-serif;
-    color: #A29393;
-    font-weight: 100;
-    font-size: 17px;
-}*/
-
-/*Emily's code for about section can be seen below*/
 
 div.wrapper {
     text-align: center;
@@ -345,9 +347,6 @@ div.Lcontent img {
     width: 100%;
     padding-top: 10%;
 }
-
-/*-------------------------------------------------*/
-
 .title{
     text-align: center;
     width:100%;
@@ -413,11 +412,7 @@ div.Lcontent img {
     border-top-width:20px;
     border-style:solid;
     border-color: rgba(237,39,147,0.9);
-    /*background-color:rgba(181,191,52,0.9);
-    background-color:rgba(21,115,186,0.9);
-    background-color:rgba(87,45,136,0.9);
-    background-color:rgba(232,133,36,0.9);
-    background-color:rgba(23,156,167,0.9);*/
+    /**/
 }
     .teamList li.Software{/*
         border-width:0px;
@@ -430,13 +425,13 @@ div.Lcontent img {
     border-left-width:20px;
     border-style:solid;
     border-color*/background-color:rgba(21,115,186,0.9)
-*/}
+}
         .teamList li.Finance{
      /*  border-width:0px;
     border-right-width:20px;
     border-style:solid;
     border-color*/background-color:rgba(232,133,36,0.9);
-*/}
+}
 
 .post{
     width:80%;
