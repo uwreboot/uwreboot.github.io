@@ -187,7 +187,7 @@ section.about h1 {
     padding-top: 35px;
 } alterate design*/
 
-section.about h2,section.more h2, section.footer h2 {
+section.about h2,section.more h2, section.footer h2, .contactBar h2{
     font-family: 'Nunito', sans-serif;
     font-weight: 100;
     font-size: 17px;
@@ -396,9 +396,13 @@ div.Lcontent {
     padding:20px;
     background-color: rgba(0,0,0,0);
     color:#FFF;
-
 }
-
+hr{
+    border-width:1px;
+    border-style:solid;
+    border-color:white;
+    width:50%;
+}
 div.Lcontent h1 {
     position:relative;
     color:white;
@@ -424,12 +428,15 @@ div.Lcontent img {
 div.Lcontent p:last-child{
     text-align: center;
 }
+.team{
+    top:100vh;
+}
 .title{
     text-align: center;
     width:100%;
     color:white;
     font-family: 'Istok Web', sans-serif;
-    letter-spacing: 7px;
+    letter-spacing: 14px;
     text-transform: uppercase;
    font-size:20px;
     margin-left:auto;
@@ -457,6 +464,7 @@ div.Lcontent p:last-child{
     font-weight:normal ;
     text-transform: uppercase;
     letter-spacing: 5px;
+    display:inline;
 }
 .teamlist h2{
     font-size:16pt;
@@ -490,16 +498,20 @@ div.Lcontent p:last-child{
 .teamList li img{
     width:100px;
     height:100px;
+    display:block;
+    margin:auto;
+    margin-bottom: 10px;
     border-radius:50%;
 }
 
 .post{
+    text-align: left;
     width:80%;
     margin:auto;
     margin-top:15px;
     margin-bottom:5px;
     border-radius:0px;
-    padding:10px;
+    padding:20px;
     color: #655;
     background-color:rgba(255,255,255,0.9);
 }
@@ -511,6 +523,8 @@ div.Lcontent p:last-child{
 }
 .post h1 {
     font-size:18pt;
+    text-transform: uppercase;
+    letter-spacing: 5px;
 }
 .post h2 {
     font-size:12pt;
@@ -527,13 +541,21 @@ div.Lcontent p:last-child{
     font-size:12pt;
     color:#CBB;
 }
-
-.col{
+.tall{
     width:30%;
+}
+.ftr{
+    width:45%;
+}
+.col-l {
+    direction: rtl;
+}
+.col{
+       
+    text-align: center;
+    vertical-align: top;
     margin:1%;
     display:inline-block;
-    text-align: center;
-    vertical-align: middle;
     padding:20px;
     min-width: 300px;
     background-color: rgba(255,255,255,0.8)
@@ -563,11 +585,10 @@ div.Lcontent p:last-child{
     color:#A29393;
     font-size: 15px;
 }
-.thumb-cal{
+.thumb{
+    display:inline-block;
     padding:13px;
-    width:100px;
-    height:100px;
-    margin:auto;
+    margin:20px;
     border-color:#A29393;
     border-style: solid;
     border-width:2px;
@@ -575,15 +596,55 @@ div.Lcontent p:last-child{
     color:#A29393;
     font-family: "Nunito", sans-serif;
 }
-.thumb-cal p{
+.thumb p{
     margin:0px;
     padding:0px;
     vertical-align: middle;
 }
+.thumb-rect{
+    width:150px;
+    height:75px;
+    vertical-align: middle;
+}
+.thumb-logo{
+    width:auto;
+    height:75px;
+    vertical-align: middle;
+}
+.thumb-cal{
+       width:100px;
+    height:100px;
+}
+
 .thumb-cal p:first-child{
     text-transform: uppercase;
     font-size: 15px;
 }
 .thumb-cal p:last-child{
     font-size:40px;
+}
+.content .title{
+    display:inline-block;
+    margin-top: 200px;
+}
+.content .contactBar{
+    display:inline-block;
+    margin-top: 20px;
+    background-color: rgba(255,255,255,0.9);
+    color:#A29393;
+    font-weight:bold;
+    width:100%;
+}
+.contactBar h2, a{
+    display:inline;
+}
+.contactBar h2{
+    margin-left: 25%
+}
+.contactBar a{
+    margin-right: 25%;
+    color:#A29393;
+}
+.contactBar{
+    text-align: left;
 }
