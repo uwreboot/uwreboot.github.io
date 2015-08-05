@@ -9,26 +9,48 @@
 	<link rel="stylesheet" href="flickity-docs/flickity.css">
 	<link rel="stylesheet" href="style.css">
 </head>
-<body class = "mainbg">
+<body class = "mainbg" onload="setTimeout(function(){cycle();},7000)">
 	<header class="home" id="home">
 		<nav class="clearfix">
 			<a href="index.html"><img src="images/reboot.png"></a>
 			<ul>
-				<li><a class="hvr-pulse" href="index.html">Home</a></li>
-				<li><a class="hvr-pulse" href="about.html">About Us</a></li>
-				<li><a class="hvr-pulse" href="join.html">Join the Club</a></li>
-				<li><a class="hvr-pulse" href="blog.html">Blog</a></li>
-				<li><a class="hvr-pulse" href="contact.html">Contact</a></li>
+				<li class = "menubtn"><a class="hvr-pulse" href="index.html">Home</a></li>
+				<li class = "menubtn"><a class="hvr-pulse" href="about.html">About Us</a></li>
+				<li class = "menubtn"><a class="hvr-pulse" href="join.html">Join the Club</a></li>
+				<li class = "menubtn"><a class="hvr-pulse" href="blog.html">Blog</a></li>
+				<li class = "menubtn"><a class="hvr-pulse" href="contact.html">Contact</a></li>
+				<li class = "menubtn" style = "display:none; background=#AAA;"> <i class="fa fa-chevron-up" onclick="closeMenu()"></i></li>
 			</ul>
 		</nav>
 	</header>
 	<section class="splash">
 		
 			<img class="logo" src="images/rebootlogo.png">
-			<h1>Collaborate with all types of people</h1>
+			<h1 id = "1h1" class = "on" >Collaborate1 with all types of people</h1>
+			<h1 id = "2h1" class = "off" >Collaborate2 with all types of people</h1>
+			<h1 id = "3h1" class = "off" >Collaborate3 with all types of people</h1>
+			<h1 id = "4h1" class = "off" >Collaborate4 with all types of people</h1>
+			<h1 id = "5h1" class = "off" >Collaborate5 with all types of people</h1>
+			<h1 id = "6h1" class = "off" >Collaborate6 with all types of people</h1>
+			<h1 id = "7h1" class = "off" >Collaborate7 with all types of people</h1>
+			<h1 id = "8h1" class = "off" >Collaborate8 with all types of people</h1>
+			<script>
+					function cycle(){
+						var end = "h1";
+						var it = document.getElementsByClassName("on")[0];
+						var beginning = String.fromCharCode(it.id.charCodeAt(0)+1);
+						if (beginning == "9"){
+							beginning = "1"
+						}
+						var next = document.getElementById(beginning.concat(end));
+						it.className="off";
+						next.className="on";
+						setTimeout(function(){cycle();},7000);
+					}
+			</script>
 			<br/>
 			<h2>Reboot the culture of creation.</h2>
-			<a href="#aboutUs" class="hvr-sink"><i class="fa fa-chevron-down"></i></a>
+			<a href="#aboutUs" class="hvr-sink sScroll"><i class="fa fa-chevron-down"></i></a>
 	</section>
 
 	<!---this is the about section-->
@@ -142,6 +164,7 @@
 		</a>
 		<h2>Special Thanks To:</h2>
 		<h2>Nasser Mohieddin Abukhdeir | Suhash Aravindan | Grace So | The RigidWare Team | Tom Storwick<h2>
+		<a href = "please replace this link" target = "_blank"><button> Become a Supporter </button></a>
 	</section>
 
 <script>	

@@ -17,8 +17,21 @@ body {
     --pink-color:rgba(237,39,147,1);
 
 }
+.off{
+    display:none;
+}
+.on{
+    display:inline-block;
+}
 a{
     text-decoration: none;
+    outline:0;
+}
+.sScroll{
+    border: 0;
+    color:rgba(0,0,0,0);
+    outline:0;
+
 }
 ul{
     text-decoration: none;
@@ -63,7 +76,6 @@ nav img {
 nav ul {
     float:right;
 }
-
 .splash {
     height: 800px;
     text-align:center;
@@ -277,6 +289,21 @@ section.more{
 
     width:20%;
     min-width:200px;
+}
+.footer button{
+        background-color:rgba(0,0,0,0);
+    border-color:#A29393;
+    border-style:solid;
+    border-radius:0px;
+    color:#A29393;
+    height:75px;
+    margin-top: 10px;
+    width:20%;
+    min-width:200px;
+}
+.footer button:hover{
+    background-color:#A29393;
+    color:#FFF;
 }
 .info li:nth-child(1) button:hover, .info li:nth-child(1) .active{
     background-color:rgba(87,45,136,1);
