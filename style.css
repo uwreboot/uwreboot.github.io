@@ -690,7 +690,7 @@ div.Lcontent p:last-child{
     font-weight: bold;
     width: 40%;
     padding: 30px;
-    border-radius: 13px;
+    border-radius: 0px;
 }
 
 .contactBar h2, a{
