@@ -571,6 +571,23 @@ div.Lcontent p:last-child{
     min-width: 300px;
     background-color: rgba(255,255,255,0.8)
 }
+
+.fullwidth {
+    margin: 1%;
+}
+
+
+.fullwidth h1 {
+    font-size: 58px;
+    text-shadow: 1px 2px 12px #6B6B6B;
+    color: white;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: 200;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    padding: 148px;
+}
+
 .col h1{
         margin: auto;
     font-size: 20px;
@@ -638,14 +655,17 @@ div.Lcontent p:last-child{
     display:inline-block;
     margin-top: 200px;
 }
-.content .contactBar{
-    display:inline-block;
-    margin-top: 20px;
-    background-color: rgba(255,255,255,0.9);
-    color:#A29393;
-    font-weight:bold;
-    width:100%;
+.content .contactBar {
+    display: inline-block;
+    margin-top: 48px;
+    background-color: rgba(255,255,255,0.8);
+    color: #A29393;
+    font-weight: bold;
+    width: 40%;
+    padding: 30px;
+    border-radius: 13px;
 }
+
 .contactBar h2, a{
     display:inline;
 }
@@ -653,9 +673,88 @@ div.Lcontent p:last-child{
     margin-left: 25%
 }
 .contactBar a{
-    margin-right: 25%;
     color:#A29393;
 }
 .contactBar{
     text-align: left;
+}
+
+.contactBar form {
+    text-align: center;
+}
+
+.contactBar form p{
+    font-family: 'Istok Web', sans-serif;
+    font-weight: 200;
+}
+
+.contactBar form p a{
+    text-decoration: underline;
+    
+}
+
+.contactBar form div {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contactBar form div ul li {
+    display: inline;
+    padding: 20px;
+}
+
+.contactBar form li i {
+    color: black;
+    font-size: 30px;
+}
+
+/*contact form begins*/
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body { background:rgb(30,30,40); }
+form { max-width:420px; margin:50px auto; }
+
+.feedback-input {
+    color: #A29393;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border: 2px solid grey;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+.feedback-input:focus { border:2px solid #36302E; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    width: 100%;
+    background: #FB9D53;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    margin-top: -4px;
+    font-weight: 700;
+}
+[type="submit"]:hover {
+    background-color: #FE8424;
 }
