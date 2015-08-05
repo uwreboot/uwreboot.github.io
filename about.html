@@ -53,42 +53,42 @@
 					<li class = "President">
 						<div class = "highlight"></div>
 						<img src="images/Amit2.JPG"/>
-						<a href ="mailto:president@reboot.build"><h1>Club<br/>President</h1></a>
+						<a class="hvr-shrink" href ="mailto:president@reboot.build"><h1>Club<br/>President</h1></a>
 						<h2>Amit Mehta</h2>
 						<p><strong>&quotThis club is like my child&quot</strong></p>
 					</li>
 					<li  class = "Marketing">
 						<div class = "highlight"></div>
 						<img src="images/Emily.jpg"/>
-						<a href ="mailto:vpmarketing@reboot.build"/><h1>Vice President<br/>of Marketing</h1></a>
+						<a class="hvr-shrink" href ="mailto:vpmarketing@reboot.build"/><h1>Vice President<br/>of Marketing</h1></a>
 						<h2>Emily MacGowan</h2>
 						<p><strong>&quotI do a lot of stuff...&quot</strong></p>
 					</li>
 					<li class = "Software">
 						<div class = "highlight"></div>
 						<img src="images/Theeran2.jpg"/>
-						<a href ="mailto:vpsoftware@reboot.build"/><h1>Vice President<br/>of Software</h1></a>
+						<a class="hvr-shrink" href ="mailto:vpsoftware@reboot.build"/><h1>Vice President<br/>of Software</h1></a>
 						<h2>Theeran Kanthan</h2>
 						<p><strong>&quotI'm at the airport, but let's have our meeting anyway&quot</strong></p>
 					</li>
 					<li class = "Logistics">
 						<div class = "highlight"></div>
 						<img src="images/potato.jpg"/>
-						<a href="mailto:vplogistics@reboot.build"/><h1>Vice President<br/>of Logistics</h1></a>
+						<a class="hvr-shrink" href="mailto:vplogistics@reboot.build"/><h1>Vice President<br/>of Logistics</h1></a>
 						<a href = "http://goo.gl/forms/g5BBEL8dH3" target="_blank"><h2>Apply Here!</h2></a>
 						<p><strong>Securing Locations, Organizing Trips &amp Maintaining Club Timelines</strong></p>
 					</li>
 					<li class = "Finance">
 						<div class = "highlight"></div>
 						<img src="images/potato.jpg"/>
-						<a href="mailto:vpfinance@reboot.build"/><h1>Vice President<br/>of Finance</h1></a>
+						<a class="hvr-shrink" href="mailto:vpfinance@reboot.build"/><h1>Vice President<br/>of Finance</h1></a>
 						<a href = "https://docs.google.com/forms/d/12B0NhADOqSmTX-uoMkwd_jH1L2A_xP0JV8Pb-uCSrn0/viewform?usp=send_form" target="_blank"><h2>Apply Here!</h2></a>
 						<p><strong>Securing Sponsorships, Managing the Budget &amp Allotting Funds</strong></p>
 					</li>
 					<li class = "Outreach">
 						<div class = "highlight"></div>
 						<img src="images/potato.jpg"/>
-						<a href="mailto:outreach@reboot.build"/><h1>Community<br/>Outreach Specialist</h1></a>
+						<a class="hvr-shrink" href="mailto:outreach@reboot.build"/><h1>Community<br/>Outreach Specialist</h1></a>
 						<a href = "https://docs.google.com/forms/d/1l8BxZPSBFf5Hqnb4QtQ2or5RFBD-dmX6Pkb6IaQj8Sk/viewform?usp=send_form" target="_blank"><h2>Apply Here!</h2></a>
 						<p><strong>Contact Mentors and Partners, and help Organize Workshops</strong></p>
 					</li>
@@ -97,12 +97,30 @@
 					</div>
 						<section class = "footer2 footer">
 	<h2>Interested in becoming an executive but not sure what position you'd like?</h2>
-	<a href = "https://docs.google.com/forms/d/1ehh-wkgrQ14ARwJ5vDnnb1T3-OjgT2haoxgIw_6NThE/viewform?usp=send_form" target="_blank"><h1> Apply to be a Director</h1></a>
+	<a href = "https://docs.google.com/forms/d/1ehh-wkgrQ14ARwJ5vDnnb1T3-OjgT2haoxgIw_6NThE/viewform?usp=send_form" target="_blank"><h1> <i class="fa fa-angle-double-right"></i> Apply to be a Director</h1></a>
 	<h2>and try a little bit of everything</h2>
 	</section>
 
 			</div>
 		</div>
 	</section>
+
+	<script>
+	$('a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+	        || location.hostname == this.hostname) {
+
+	        var target = $(this.hash);
+	        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	           if (target.length) {
+	             $('html,body').animate({
+	                 scrollTop: target.offset().top
+	            }, 1000);
+	            return false;
+	        }
+	    }
+	});
+	</script>
+
 	</body>
 </html>

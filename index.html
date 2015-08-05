@@ -71,7 +71,7 @@
 					</script>		
 				</ul> 
 				<div id ="one" class = "active">
-				<h2>We’ll give you some materials, tools, and a space to use them in. You’ve got your experience and your know-how, but you’ve also got an awesome group of people around you to learn from. Together, by sharing your skills, you’ve got two hours to design, create, and build something awesome; hands-on learning at its finest. Let’s see what this club can come up with.	</h2>
+				<h2>We’ll give you some materials, tools, and a space to use them in. You’ve got your experience and your know-how, but you’ve also got an awesome group of people around you to learn from. Together, by sharing your skills, you have two hours to design, create, and build something that you're proud of; hands-on learning at its finest. Let’s see what this club can come up with.	</h2>
 				<h2 class ="emp">Have an idea for a cool project? Make it come to life by <a href="mailto:president@reboot.build?subject=Creative Project Idea" class = "purple"> letting us know.</a></h2>
 				</div>
 				<div id ="two" class ="inactive">
@@ -111,23 +111,47 @@
 		  	<div class="gallery-cell">
 		  		<img src="images/looking.jpg">
 		  	</div>
-		  				<script src="jquery-2.1.3.min.js"></script> 
+		  	<div class="gallery-cell">
+		  		<img src="images/meeting2.jpg">
+		  	</div>
+		  	<div class="gallery-cell">
+		  		<img src="images/meeting3.jpg">
+		  	</div>
+		  	<div class="gallery-cell">
+		  		<img src="images/meeting4.jpg">
+		  	</div>
+    
+    <script src="jquery-2.1.3.min.js"></script> 
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="flickity-docs/flickity.pkgd.min.js"></script>
-		</div>
 
 	</section>
 	<section class = "footer">
-	<h1> Our Supporters </h1>
-<img src ="images/supporters/engsoc.png">
-<img src ="images/supporters/logo-p1.png">
-<img src ="images/supporters/logo.jpg">
+		<h1> Our Supporters </h1>
+		<img src ="images/supporters/engsoc.png">
+		<img src ="images/supporters/logo-p1.png">
+		<img src ="images/supporters/logo.jpg">
 		<img src ="images/supporters/uwaterloo.png">
 		<h2>Special Thanks To:</h2>
 		<h2>Nasser Abukhdeir | Suhash Aravindan | Grace So | The RigidWare Team | Tom Storwick<h2>
 	</section>
-	
 
+<script>	
+$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+        || location.hostname == this.hostname) {
+
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+           if (target.length) {
+             $('html,body').animate({
+                 scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    }
+});
+</script>
 
 </body>
 </html>

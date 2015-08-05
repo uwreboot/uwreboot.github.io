@@ -334,6 +334,11 @@ section.footer2{
 section.footer2 h1{
     margin-bottom: 10px !important;
 }
+
+section.footer2 a:hover h1{
+    color: #F57F22;
+}
+
 section.footer img{
     position:inline;
     margin:auto;
@@ -483,6 +488,12 @@ div.Lcontent p:last-child{
 .teamList li a{
     color:#555;
 }
+
+.teamList li a:hover {
+    color: #6D6CAD;
+    /*alternate color: #F57F22 like logo*/
+}
+
 .teamList li{
     display:inline-block;
     background-color:rgba(255,255,255,0.8);
