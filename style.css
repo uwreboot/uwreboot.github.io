@@ -679,6 +679,20 @@ div.Lcontent p:last-child{
     text-align: left;
 }
 
+.contactBar form {
+    text-align: center;
+}
+
+.contactBar form p{
+    font-family: 'Istok Web', sans-serif;
+    font-weight: 200;
+}
+
+.contactBar form p a{
+    text-decoration: underline;
+    
+}
+
 .contactBar form div {
     text-align: center;
     margin-bottom: 50px;
@@ -702,7 +716,7 @@ body { background:rgb(30,30,40); }
 form { max-width:420px; margin:50px auto; }
 
 .feedback-input {
-    color: white;
+    color: #A29393;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: 500;
     font-size: 18px;
