@@ -300,10 +300,11 @@ section.more{
     margin-top: 10px;
     width:20%;
     min-width:200px;
+    transition: background 0.5s, color 0.5s;
 }
-.footer button:hover{
-    background-color:#A29393;
-    color:#FFF;
+.footer button:hover {
+    background-color: #F57F23;
+    color: #FFF;
 }
 .info li:nth-child(1) button:hover, .info li:nth-child(1) .active{
     background-color:rgba(87,45,136,1);

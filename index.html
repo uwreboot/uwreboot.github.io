@@ -32,26 +32,26 @@
 	<section class="splash">
 		
 			<img class="logo" src="images/rebootlogo.png">
-			<h1 id = "1h1" class = "on" >Collaborate1 with all types of people</h1>
-			<h1 id = "2h1" class = "off" >Collaborate2 with all types of people</h1>
-			<h1 id = "3h1" class = "off" >Collaborate3 with all types of people</h1>
-			<h1 id = "4h1" class = "off" >Collaborate4 with all types of people</h1>
-			<h1 id = "5h1" class = "off" >Collaborate5 with all types of people</h1>
-			<h1 id = "6h1" class = "off" >Collaborate6 with all types of people</h1>
+			<h1 id = "1h1" class = "on" >Collaborate with all types of people</h1>
+			<h1 id = "2h1" class = "off" >Step out of your comfort zone</h1>
+			<h1 id = "3h1" class = "off" >Design, Create, Innovate</h1>
+			<h1 id = "4h1" class = "off" >Find your passion</h1>
+			<h1 id = "5h1" class = "off" >Hands-on collaboration</h1>
+			<!-- <h1 id = "6h1" class = "off" >Collaborate6 with all types of people</h1>
 			<h1 id = "7h1" class = "off" >Collaborate7 with all types of people</h1>
-			<h1 id = "8h1" class = "off" >Collaborate8 with all types of people</h1>
+			<h1 id = "8h1" class = "off" >Collaborate8 with all types of people</h1> -->
 			<script>
 					function cycle(){
 						var end = "h1";
 						var it = document.getElementsByClassName("on")[0];
 						var beginning = String.fromCharCode(it.id.charCodeAt(0)+1);
-						if (beginning == "9"){
+						if (beginning == "6"){
 							beginning = "1"
 						}
 						var next = document.getElementById(beginning.concat(end));
 						it.className="off";
 						next.className="on";
-						setTimeout(function(){cycle();},7000);
+						setTimeout(function(){cycle();},4000);
 					}
 			</script>
 			<br/>
@@ -148,7 +148,7 @@
 		  	<div class="gallery-cell">
 		  		<img src="images/meeting4.jpg">
 		  	</div>
-    
+    	</div>
     <script src="jquery-2.1.3.min.js"></script> 
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="flickity-docs/flickity.pkgd.min.js"></script>
