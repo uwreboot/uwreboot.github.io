@@ -1,19 +1,55 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>reboot</title>
 	<link rel="stylesheet" href="hover.css">
 	<link href='http://fonts.googleapis.com/css?family=Patrick+Hand|Indie+Flower|Istok+Web|Roboto+Condensed:300italic,400,300|Oxygen:400,300|Nunito:400,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="flickity-docs/flickity.css">
 	<link rel="stylesheet" href="style.css">
+	
+	<script type="text/javascript">
+        var mobile = document.createElement('div');
+        mobile.className = 'nav-mobile';
+        document.querySelector('.nav').appendChild(mobile);
+        
+        // hasClass
+    function hasClass(elem, className) {
+      return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+    }
+
+// toggleClass
+function toggleClass(elem, className) {
+  var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
+        if (hasClass(elem, className)) {
+            while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+                newClass = newClass.replace(' ' + className + ' ', ' ');
+            }
+            elem.className = newClass.replace(/^\s+|\s+$/g, '');
+        } else {
+            elem.className += ' ' + className;
+        }
+    }
+
+        var mobileNav = document.querySelector('.nav-mobile');
+        var toggle = document.querySelector('.nav-list');
+            mobileNav.onclick = function() {
+            toggleClass(this, 'nav-mobile-open');
+            toggleClass(toggle, 'nav-active');
+        }   
+    
+    </script>
+	
+	
 </head>
 <body class = "mainbg" onload="setTimeout(function(){cycle();},7000)">
 	<header class="home" id="home">
 		<nav class="clearfix">
 			<a href="index.html"><img src="images/reboot.png"></a>
-			<ul>
+			<ul class="nav-list">
 				<li class = "menubtn"><a class="hvr-pulse" href="index.html">Home</a></li>
 				<li class = "menubtn"><a class="hvr-pulse" href="about.html">About Us</a></li>
 				<li class = "menubtn"><a class="hvr-pulse" href="join.html">Join the Club</a></li>
