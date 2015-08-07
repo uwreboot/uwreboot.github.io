@@ -807,8 +807,10 @@ textarea {
     }
     
     .menubtn{
+        box-sizing:border-box;
+        padding:15px;
         width:100%;
-        float:none;
+        
     }
     
     .nav-mobile{
