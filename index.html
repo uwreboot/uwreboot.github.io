@@ -17,9 +17,9 @@
 </head>
 <body class = "mainbg" onload="setTimeout(function(){cycle();},7000)">
 	<header class="home" id="home">
-		<nav class="nav">
+		<nav class="open">
 			<a href="index.html"><img src="images/reboot.png"></a>
-			<ul class="nav-list">
+			<ul class="sub-menu">
 				<li class = "menubtn"><a class="hvr-pulse" href="index.html">Home</a></li>
 				<li class = "menubtn"><a class="hvr-pulse" href="about.html">About Us</a></li>
 				<li class = "menubtn"><a class="hvr-pulse" href="join.html">Join the Club</a></li>
@@ -190,37 +190,22 @@ $('a[href*=#]:not([href=#])').click(function() {
 });
 </script>
 
-<script type="text/javascript">
-        var mobile = document.createElement('div');
-        mobile.className = 'nav-mobile';
-        document.querySelector('.nav').appendChild(mobile);
-        
-        // hasClass
-    function hasClass(elem, className) {
-      return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
-    }
-
-// toggleClass
-function toggleClass(elem, className) {
-  var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
-        if (hasClass(elem, className)) {
-            while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
-                newClass = newClass.replace(' ' + className + ' ', ' ');
-            }
-            elem.className = newClass.replace(/^\s+|\s+$/g, '');
-        } else {
-            elem.className += ' ' + className;
-        }
-    }
-
-        var mobileNav = document.querySelector('.nav-mobile');
-        var toggle = document.querySelector('.nav-list');
-            mobileNav.onclick = function() {
-            toggleClass(this, 'nav-mobile-open');
-            toggleClass(toggle, 'nav-active');
-        }   
-    
-    </script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<script>
+$(document).ready(function() {
+		$(document).delegate('.open', 'click', function(event){
+			$(this).addClass('oppenned');
+			event.stopPropagation();
+		})
+		$(document).delegate('body', 'click', function(event) {
+			$('.open').removeClass('oppenned');
+		})
+		$(document).delegate('.cls', 'click', function(event){
+			$('.open').removeClass('oppenned');
+			event.stopPropagation();
+		});
+	});
+</script>
 
 </body>
 </html>
