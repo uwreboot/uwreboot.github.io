@@ -804,39 +804,5 @@ textarea {
 @media only screen and (max-width:768px){
 
     
-    .nav-mobile {
-		display:block;
-        top:15%;
-	}
-	.nav {
-		width:100%;
-		padding:40px 0 0;
-	}
-	.nav-list {
-		display:none;
-	}
-	.nav-item {
-		width:100%;
-		float:none;
-	}
-	.menubtn a {
-		background:#34495E;
-		padding:10px;
-	}
-	.menubtn:first-child a {
-		border-radius:5px 0 0;
-	}
-	.menubtn:last-child a {
-		border-radius:0 0 5px 5px;
-	}
-	.nav-active {
-		display:block;
-	}
-	.nav-mobile-open {
-		border-radius:5px 5px 0 0;
-		-webkit-border-radius:5px 5px 0 0;
-		-moz-border-radius:5px 5px 0 0;
-	}
-    
     
 }
