@@ -568,7 +568,7 @@ div.Lcontent p:last-child{
     padding:25px;
     width:40%;
     vertical-align: top;
-    min-height: 250px;
+    min-height: 300px;
     min-width: 300px;
 }
 .teamList li img{
@@ -626,15 +626,27 @@ div.Lcontent p:last-child{
 .col-l {
     direction: rtl;
 }
-.col{
-       
+
+.mediabreak {
+    display: none;
+}
+
+.col {
     text-align: center;
     vertical-align: top;
-    margin:1%;
-    display:inline-block;
-    padding:20px;
+    margin: 1%;
+    display: inline-block;
+    padding: 20px;
     min-width: 300px;
-    background-color: rgba(255,255,255,0.8)
+    background-color: rgba(255,255,255,0.8);
+}
+
+.minheight1 {
+    min-height: 180px;
+}
+
+.minheight2 {
+    min-height: 455px;
 }
 
 .fullwidth {
@@ -856,10 +868,20 @@ textarea {
     }
 }
 
+@media (max-width:815px){
+    .mediabreak {
+        display: inline;
+    } 
+}
+
 @media (max-width:800px){
     section.about div.faculties {
         width: 59%;
     }
+}
+
+@media (max-width:700px){
+    
 }
 
 @media (max-width:605px){
