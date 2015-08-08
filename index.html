@@ -37,6 +37,7 @@
 			<h1 id = "3h1"  >Design, Create, Innovate</h1>
 			<h1 id = "4h1"  >Find your passion</h1>
 			<h1 id = "5h1"  >Hands-on collaboration</h1>
+			<h1 id = "secret"  >WE SHALL NOT BE SILENCED!</h1>
 			<!-- <h1 id = "6h1" class = "off" >Collaborate6 with all types of people</h1>
 			<h1 id = "7h1" class = "off" >Collaborate7 with all types of people</h1>
 			<h1 id = "8h1" class = "off" >Collaborate8 with all types of people</h1> -->
@@ -49,6 +50,9 @@
 							beginning = "1"
 						}
 						var next = document.getElementById(beginning.concat(end));
+						if (random()>0.999){		//One in a thousand chance...
+							next = document.getElementById("secret");
+						}
 						it.style.display="none";
 						next.style.display="inline-block";
 						setTimeout(function(){cycle();},4000);
