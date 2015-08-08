@@ -15,13 +15,6 @@ body {
     --orange-color:rgba(232,133,36,0.9);
     --lblue-color:rgba(23,156,167,0.9);
     --pink-color:rgba(237,39,147,1);
-
-}
-.off{
-    display:none;
-}
-.on{
-    display:inline-block;
 }
 a{
     text-decoration: none;
