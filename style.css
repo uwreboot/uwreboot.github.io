@@ -57,25 +57,6 @@ nav {
     margin-top: 10px;
     display: block;
 } make this hover so that the logo becomes orange when you hover over it*/
-
-    nav ul  li.down{
-        display: inline-block;
-        width: 100%;
-    }
-    nav ul.down{
-        width: 100%;
-        display:inline-block;
-    }
-        .menuClose .down{
-        width:100%;
-        background-color: #AAA;
-        display: inline-block;
-        text-align: center;
-    }
-
-.menuOpen, .menuClose{
-    display: none;
-}
 nav img {
     float:left;
     height: 38px;
@@ -93,19 +74,51 @@ nav ul {
 }
 
 @media screen and (max-width : 800px){
-
-    nav .menuOpen{
-        width: 50px;
-        height: 50px;
+    nav.mobileNav{
         display:block;
-        position:absolute;
-        top:5px;
-        right: 20px;
     }
-    .menubtn{
+    nav.mainNav{
         display:none;
     }
 }
+.mobileNav{
+    display:none;
+}
+.mainNav{
+    display:block;
+}
+.collapsed{
+    display:none !important;
+}
+.mbtn{
+    display:block;
+    margin:auto;
+    padding-top:20px;
+    padding-bottom:20px;
+    text-align: center;
+    background-color: rgba(255,255,255,0.95);
+    width:100%;
+    border-top-style: solid;
+    border-color:#A29393;
+    border-width:2px;
+}
+.mbtn:nth-child(2){
+    margin-top:12px;
+}
+.mobileNav .sub-menu{
+    width:100%;
+    margin:auto;
+
+}
+.menuOpen{
+    width: 50px;
+    height: 50px;
+    display:block;
+    position:absolute;
+    top:5px;
+    right: 20px;
+}
+
 
 .splash h1 {
     margin: auto;
