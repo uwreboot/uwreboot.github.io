@@ -102,20 +102,18 @@ nav ul {
     border-color:#A29393;
     border-width:2px;
 }
-.mbtn:nth-child(2){
-    margin-top:12px;
-}
 .mobileNav .sub-menu{
     width:100%;
     margin:auto;
-
+    position: absolute;
+    top: 60px;
 }
 .menuOpen{
     width: 50px;
     height: 50px;
     display:block;
     position:absolute;
-    top:5px;
+    top:-5px;
     right: 20px;
 }
 
