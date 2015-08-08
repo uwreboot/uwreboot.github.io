@@ -17,15 +17,16 @@
 </head>
 <body class = "mainbg" onload="setTimeout(function(){cycle();},4000)">
 	<header class="home" id="home">
-		<nav class="open">
+		<nav>
 			<a href="index.html"><img src="images/reboot.png"></a>
 			<ul class="sub-menu">
+			<li class = "menuOpen" ><img src = "images/logo.png"/></li>
 				<li class = "menubtn"><a class="hvr-pulse" href="index.html">Home</a></li>
 				<li class = "menubtn"><a class="hvr-pulse" href="about.html">About Us</a></li>
 				<li class = "menubtn"><a class="hvr-pulse" href="join.html">Join the Club</a></li>
 				<li class = "menubtn"><a class="hvr-pulse" href="blog.html">Blog</a></li>
 				<li class = "menubtn"><a class="hvr-pulse" href="contact.html">Contact</a></li>
-				<li class = "menubtn" style = "display:none; background=#AAA;"> <i class="fa fa-chevron-up" onclick="closeMenu()"></i></li>
+				<li class = "menuClose"> <i class="fa fa-chevron-up" onclick="closeMenu()"></i></li>
 			</ul>
 		</nav>
 	</header>
@@ -46,7 +47,6 @@
 
 						var end = "h1";
 						var it = document.getElementsByClassName("on")[0];
-
 						var beginning = String.fromCharCode(it.id.charCodeAt(0)+1);
 						if (beginning == "6"){
 							beginning = "1"
@@ -58,7 +58,7 @@
 						it.style.display="none";
 						next.style.display="inline-block";
 						it.className="off";
-						next.className="one";
+						next.className="on";
 						setTimeout(function(){cycle();},4000);
 					}
 			</script>

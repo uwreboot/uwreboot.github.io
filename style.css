@@ -58,6 +58,24 @@ nav {
     display: block;
 } make this hover so that the logo becomes orange when you hover over it*/
 
+    nav ul  li.down{
+        display: inline-block;
+        width: 100%;
+    }
+    nav ul.down{
+        width: 100%;
+        display:inline-block;
+    }
+        .menuClose .down{
+        width:100%;
+        background-color: #AAA;
+        display: inline-block;
+        text-align: center;
+    }
+
+.menuOpen, .menuClose{
+    display: none;
+}
 nav img {
     float:left;
     height: 38px;
@@ -74,7 +92,20 @@ nav ul {
     text-align:center;
 }
 
+@media screen and (max-width : 800px){
 
+    nav .menuOpen{
+        width: 50px;
+        height: 50px;
+        display:block;
+        position:absolute;
+        top:5px;
+        right: 20px;
+    }
+    .menubtn{
+        display:none;
+    }
+}
 
 .splash h1 {
     margin: auto;
