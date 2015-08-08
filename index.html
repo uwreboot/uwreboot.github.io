@@ -198,22 +198,6 @@ $('a[href*=#]:not([href=#])').click(function() {
 });
 </script>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
-<script>
-$(document).ready(function() {
-		$(document).delegate('.open', 'click', function(event){
-			$(this).addClass('oppenned');
-			event.stopPropagation();
-		})
-		$(document).delegate('body', 'click', function(event) {
-			$('.open').removeClass('oppenned');
-		})
-		$(document).delegate('.cls', 'click', function(event){
-			$('.open').removeClass('oppenned');
-			event.stopPropagation();
-		});
-	});
-</script>
 
 <!-- this comment is a test -->
 
