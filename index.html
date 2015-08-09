@@ -11,12 +11,12 @@
 	<link rel="stylesheet" href="flickity-docs/flickity.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
-
-	
-	
-	
-	
+ 	<script type="text/javascript" src="script.js" ></script>
+	<script src="jquery-2.1.3.min.js"></script> 
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="flickity-docs/flickity.pkgd.min.js"></script>
 </head>
+
 <body class = "mainbg" onload="setTimeout(function(){cycle();},4000)">
 	<header class="home" id="home">
 		<nav class = "mainNav">
@@ -43,22 +43,6 @@
 			</ul>
 		</nav>
 	</header>
-	<script>
-	function openMenu(){
-
-		var x = document.getElementsByClassName("mbtn");
-		for (i = 0; i < x.length; i++){
-
-			x[i].className = x[i].className.replace("collapsed","expanded");
-		}
-	}
-	function closeMenu(){
-		var x = document.getElementsByClassName("mbtn");
-		for (i = 0; i < x.length; i++){
-			x[i].className = x[i].className.replace("expanded","collapsed");
-		}
-	}
-	</script>
 	<section class="splash">
 		
 			<img class="logo" src="images/rebootlogomain.png"/>
@@ -71,26 +55,6 @@
 			<!-- <h1 id = "6h1" class = "off" >Collaborate6 with all types of people</h1>
 			<h1 id = "7h1" class = "off" >Collaborate7 with all types of people</h1>
 			<h1 id = "8h1" class = "off" >Collaborate8 with all types of people</h1> -->
-			<script>
-					function cycle(){
-
-						var end = "h1";
-						var it = document.getElementsByClassName("on")[0];
-						var beginning = String.fromCharCode(it.id.charCodeAt(0)+1);
-						if (beginning == "6"){
-							beginning = "1"
-						}
-						var next = document.getElementById(beginning.concat(end));
-						if (Math.random()>0.999){		//One in a thousand chance...
-							next = document.getElementById("secret");
-						}
-						it.style.display="none";
-						next.style.display="inline-block";
-						it.className="off";
-						next.className="on";
-						setTimeout(function(){cycle();},4000);
-					}
-			</script>
 			<br/>
 			<h2>Reboot the culture of creation.</h2>
 			<a href="#aboutUs" class="hvr-sink sScroll"><i class="fa fa-chevron-down"></i></a>
@@ -117,23 +81,7 @@
 				<ul>
 					<li class="hvr-grow"><button class="active" onclick="activate(this,'one')">Creative<br/> Prototyping</button></li>
 					<li class="hvr-grow"><button class ="inactive" onclick="activate(this,'two')">Mentors &amp <br/> Workshops</button></li>
-					<li class="hvr-grow"><button class="inactive" onclick="activate(this,'three')">Company <br/> Visits</button></li>
-					<script>
-						function activate(ele,parid){
-							var x =document.getElementsByClassName("active");
-							var i;
-
-							for (i = 0; i < x.length; i++) {
-    							x[i].className = "inactive";	
-    						}
-    						document.getElementById("one").className="inactive";
-    						document.getElementById("two").className="inactive";
-    						document.getElementById("three").className="inactive";
-    						var y =document.getElementById(parid);
-							y.className="active";
-							ele.className = "active"; 
-						}
-					</script>		
+					<li class="hvr-grow"><button class="inactive" onclick="activate(this,'three')">Company <br/> Visits</button></li>	
 				</ul> 
 				<div id ="one" class = "active">
 				<h2>We’ll give you some materials, tools, and a space to use them in. You’ve got your experience and your know-how, but you’ve also got an awesome group of people around you to learn from. Together, by sharing your skills, you have two hours to design, create, and build something that you're proud of; hands-on learning at its finest. Let’s see what this club can come up with.	</h2>
@@ -186,10 +134,6 @@
 		  		<img src="images/meeting4.jpg">
 		  	</div>
     	</div> 
-    <script src="jquery-2.1.3.min.js"></script> 
-	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-	<script src="flickity-docs/flickity.pkgd.min.js"></script>
-
 	</section>
 	<section class = "footer">
 		<h1> Our Supporters </h1>
@@ -209,25 +153,6 @@
 		<h2>Nasser Mohieddin Abukhdeir | Suhash Aravindan | Grace So | The RigidWare Team | Tom Storwick<h2>
 		<a  href="mailto:president@reboot.build?subject=Becoming a supporter for reboot"><button> Become a Supporter </button></a>
 	</section>
-
-<script>	
-$('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
-        || location.hostname == this.hostname) {
-
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-           if (target.length) {
-             $('html,body').animate({
-                 scrollTop: target.offset().top
-            }, 1000);
-            return false;
-        }
-    }
-});
-</script>
-
-
 <!-- this comment is a test -->
 
 </body>
