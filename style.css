@@ -983,6 +983,20 @@ textarea {
     }
 }
 
+@media (max-width:550px){
+    .foot, .colltall {
+        flex-direction: column;
+    }
+
+    .mediabreak {
+        display: none;
+    }
+
+    .minheight1 {
+        width: calc(100% - 20px);
+    }
+}
+
 @media (max-width:455px){
     section.about div.faculties {
         width: 78%;
