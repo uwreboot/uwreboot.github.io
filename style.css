@@ -672,18 +672,28 @@ div.Lcontent p:last-child{
     display: none;
 }
 
+.coltall .col{
+    margin: 10px;
+    width: calc(33.33% - 20px);
+}
+
 .col {
     text-align: center;
     vertical-align: top;
-    margin: 1%;
-    display: inline-block;
+    float: left;
     padding: 20px;
-    min-width: 300px;
     background-color: rgba(255,255,255,0.8);
 }
 
+.foot, .coltall {
+    max-width: 1260px;
+    margin: auto;
+    display: flex;
+}
+
 .minheight1 {
-    min-height: 180px;
+    width: calc(50% - 20px);
+    margin: 10px;
 }
 
 .minheight2 {
@@ -706,7 +716,7 @@ div.Lcontent p:last-child{
 }
 
 .col h1{
-        margin: auto;
+    margin: auto;
     font-size: 20px;
     color: #A29393;
     font-family: 'Istok Web', sans-serif;
@@ -910,6 +920,14 @@ textarea {
 
     .post {
         padding: 100px 70px 70px 70px;
+    }
+
+    .coltall {
+        display: block;
+    }
+
+    .coltall .col {
+        width: calc(100% - 20px);
     }
 }
 
