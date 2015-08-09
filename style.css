@@ -108,6 +108,15 @@ nav ul {
     position: absolute;
     top: 60px;
 }
+
+.mobileNav i.fa-bars{
+    font-size:20px;
+    position: absolute;
+    top:30px;
+    right:30px;
+}
+
+
 .menuOpen{
     width: 50px;
     height: 50px;
@@ -117,6 +126,13 @@ nav ul {
     right: 20px;
 }
 
+.mobileNav i.fa-bars {
+    font-size: 35px;
+    position: absolute;
+    top: 14px;
+    right: 8px;
+    color: #A29393;
+}
 
 .splash h1 {
     margin: auto;
@@ -590,6 +606,7 @@ div.Lcontent p:last-child{
     font-family: 'Nunito', sans-serif;
     position: relative;
     text-align: justify;
+    max-width: 900px;
     width: 80%;
     margin: auto;
     margin-top: 20px;
@@ -862,20 +879,6 @@ textarea {
 }
 
 
-.nav-mobile {
-  display:none; /* Hide from browsers that don't support media queries */
-  cursor:pointer;
-  position:absolute;
-  top:0;
-  right:0;
-  background:url(images/nav.svg) no-repeat center center;
-  height:40px;
-  width:40px;
-  border-radius:5px;
-  -webkit-border-radius:5px;
-  -moz-border-radius:5px;
-}
-
 @media (max-width:1300px){
     section.about div.faculties {
         width: 70%;
@@ -903,6 +906,10 @@ textarea {
 @media (max-width:800px){
     section.about div.faculties {
         width: 59%;
+    }
+
+    .post {
+        padding: 100px 70px 70px 70px;
     }
 }
 
@@ -942,6 +949,19 @@ textarea {
 
     div.Lcontent p {
         text-align:center;
+    }
+
+    .fullwidth h1 {
+        padding-top: 148px;
+        padding-bottom: 148px;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0 auto;
+    }
+
+    .post {
+        width: 100%;
+        padding: 95px 40px 40px 40px;
     }
 }
 
