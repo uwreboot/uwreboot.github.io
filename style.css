@@ -127,9 +127,9 @@ nav ul {
 }
 
 .mobileNav i.fa-bars {
-    font-size: 35px;
+    font-size: 30px;
     position: absolute;
-    top: 14px;
+    top: 16px;
     right: 8px;
     color: #A29393;
 }
