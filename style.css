@@ -586,17 +586,32 @@ div.Lcontent p:last-child{
     vertical-align:middle;
 }
 
-.post{
-    text-align: left;
-    width:80%;
-    margin:auto;
-    margin-top:15px;
-    margin-bottom:5px;
-    border-radius:0px;
-    padding:20px;
+.post {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+    text-align: justify;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 0px;
+    padding: 100px 115px 115px 115px;
     color: #655;
-    background-color:rgba(255,255,255,0.9);
+    background-color: rgba(255,255,255,0.9);
 }
+
+.post h1 {
+    font-family: "Istok Web";
+    text-align:center;
+    letter-spacing: 17px;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.post .center{
+    text-align:center;
+}
+
 .post h1, .post h2, .post h3, .post h4{
     font-family:"Istok Web";
     margin:0;
@@ -622,6 +637,9 @@ div.Lcontent p:last-child{
     text-align: right;
     font-size:12pt;
     color:#CBB;
+    position: absolute;
+    top: 50px;
+    right: 112px;
 }
 .tall{
     width:30%;
