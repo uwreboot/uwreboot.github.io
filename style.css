@@ -330,26 +330,26 @@ section.more{
     background-color: #F57F23;
     color: #FFF;
 }
-.info li:nth-child(1) button:hover, .info li:nth-child(1) .active{
-    background-color:rgba(87,45,136,1);
+.info li:nth-child(1) button:hover, .info li:nth-child(1) .active {
+    background-color: rgba(127, 98, 170, 0.9);
 }
-.info li:nth-child(2) button:hover, .info li:nth-child(2) .active{
-    background-color:rgba(181,191,52,1);
+.info li:nth-child(2) button:hover, .info li:nth-child(2) .active {
+    background-color: rgba(214, 216, 76, 0.61);
 }
-.info li:nth-child(3) button:hover, .info li:nth-child(3) .active{
-    background-color:rgba(237,39,147,1);
+.info li:nth-child(3) button:hover, .info li:nth-child(3) .active {
+    background-color: rgba(245, 73, 166, 0.46);
 }
-.info .purple{
-    font-weight:bold;
-   color: rgba(87,45,136,1);
+.info .purple {
+    font-weight: bold;
+    color: rgb(114, 80, 160);
 }
-.info .green{
-    font-weight:bold;
-   color: rgba(181,191,52,1);
+.info .green {
+    font-weight: bold;
+    color: rgb(208, 203, 123);
 }
-.info .pink{
-    font-weight:bold;
-   color: rgba(237,39,147,1);
+.info .pink {
+    font-weight: bold;
+    color: rgba(171, 36, 109, 0.62);
 }
 .info div.active{
     display:static;
@@ -628,7 +628,6 @@ div.Lcontent p:last-child{
     margin: 1%;
 }
 
-
 .fullwidth h1 {
     font-size: 58px;
     text-shadow: 1px 2px 12px #6B6B6B;
@@ -858,6 +857,15 @@ textarea {
     section.about div.faculties img {
         width: 80px;
         height: 80px;
+    }
+
+    .logo {
+        width: 250px;
+        top: 190px;
+    }
+
+    .splash h1 {
+        padding-top: 492px;
     }
 }
 
