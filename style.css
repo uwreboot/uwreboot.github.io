@@ -108,6 +108,15 @@ nav ul {
     position: absolute;
     top: 60px;
 }
+
+.mobileNav i.fa-bars{
+    font-size:20px;
+    position: absolute;
+    top:30px;
+    right:30px;
+}
+
+
 .menuOpen{
     width: 50px;
     height: 50px;
@@ -590,6 +599,7 @@ div.Lcontent p:last-child{
     font-family: 'Nunito', sans-serif;
     position: relative;
     text-align: justify;
+    max-width: 900px;
     width: 80%;
     margin: auto;
     margin-top: 20px;
@@ -904,6 +914,10 @@ textarea {
     section.about div.faculties {
         width: 59%;
     }
+
+    .post {
+        padding: 100px 70px 70px 70px;
+    }
 }
 
 @media (max-width:605px){
@@ -942,6 +956,11 @@ textarea {
 
     div.Lcontent p {
         text-align:center;
+    }
+
+    .post {
+        width: 100%;
+        padding: 95px 40px 40px 40px;
     }
 }
 
