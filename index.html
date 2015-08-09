@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="flickity-docs/flickity.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
- 	<script type="text/javascript" src="script.js" ></script>
+ 	<script src="script.js" ></script>
 	<script src="jquery-2.1.3.min.js"></script> 
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="flickity-docs/flickity.pkgd.min.js"></script>
@@ -154,6 +154,20 @@
 		<a  href="mailto:president@reboot.build?subject=Becoming a supporter for reboot"><button> Become a Supporter </button></a>
 	</section>
 <!-- this comment is a test -->
+	<script> 	$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+        || location.hostname == this.hostname) {
+
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+           if (target.length) {
+             $('html,body').animate({
+                 scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    }
+}); </script>
 
 </body>
 </html>
