@@ -1005,4 +1005,8 @@ textarea {
     section.about div.faculties img{
         margin: 3px;
     }
+
+    .title {
+        letter-spacing: 11px;
+    }
 }
