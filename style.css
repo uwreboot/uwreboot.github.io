@@ -861,11 +861,16 @@ textarea {
 
     .logo {
         width: 250px;
-        top: 190px;
+        top: 148px;
     }
 
     .splash h1 {
-        padding-top: 492px;
+        padding-top: 420px;
+        font-size: 16px;
+    }
+
+    .splash h2 {
+        font-size: 13px;
     }
 }
 
