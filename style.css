@@ -743,7 +743,9 @@ div.Lcontent p:last-child{
     background-color: rgba(255,255,255,0.8);
     color: #A29393;
     font-weight: bold;
-    width: 40%;
+    width:550px;
+    max-width: 90%;
+    min-width: 40%;
     padding: 30px;
     border-radius: 0px;
 }
