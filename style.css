@@ -567,6 +567,14 @@ div.Lcontent p:last-child{
     border-radius:50%;
 }
 
+.teamDiv .teamList div.fixedheight {
+    height: 100px;
+}
+
+.teamDiv .teamList div.fixedheight a {
+    vertical-align:middle;
+}
+
 .post{
     text-align: left;
     width:80%;
@@ -865,10 +873,6 @@ textarea {
     section.about div.faculties {
         width: 59%;
     }
-}
-
-@media (max-width:700px){
-    
 }
 
 @media (max-width:605px){
