@@ -872,20 +872,6 @@ textarea {
 }
 
 
-.nav-mobile {
-  display:none; /* Hide from browsers that don't support media queries */
-  cursor:pointer;
-  position:absolute;
-  top:0;
-  right:0;
-  background:url(images/nav.svg) no-repeat center center;
-  height:40px;
-  width:40px;
-  border-radius:5px;
-  -webkit-border-radius:5px;
-  -moz-border-radius:5px;
-}
-
 @media (max-width:1300px){
     section.about div.faculties {
         width: 70%;
