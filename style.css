@@ -826,7 +826,47 @@ textarea {
   -moz-border-radius:5px;
 }
 
-@media only screen and (max-width:768px){
+@media (max-width:1300px){
+    section.about div.faculties {
+        width: 70%;
+    }
 
-    
+    section.about div.faculties img {
+        width: 90px;
+        height: 90px;
+    }
+
+}
+
+@media (max-width:1060px){
+    section.about div.faculties {
+        width: 45%;
+    }
+}
+
+@media (max-width:800px){
+    section.about div.faculties {
+        width: 59%;
+    }
+}
+
+@media (max-width:605px){
+    section.about div.faculties {
+        width: 72%;
+    }
+
+    section.about div.faculties img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width:455px){
+    section.about div.faculties {
+        width: 78%;
+    }
+
+    section.about div.faculties img{
+        margin: 3px;
+    }
 }
