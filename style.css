@@ -126,6 +126,13 @@ nav ul {
     right: 20px;
 }
 
+.mobileNav i.fa-bars {
+    font-size: 35px;
+    position: absolute;
+    top: 14px;
+    right: 8px;
+    color: #A29393;
+}
 
 .splash h1 {
     margin: auto;
@@ -942,6 +949,14 @@ textarea {
 
     div.Lcontent p {
         text-align:center;
+    }
+
+    .fullwidth h1 {
+        padding-top: 148px;
+        padding-bottom: 148px;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0 auto;
     }
 
     .post {
