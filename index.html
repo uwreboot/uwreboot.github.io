@@ -19,19 +19,46 @@
 </head>
 <body class = "mainbg" onload="setTimeout(function(){cycle();},4000)">
 	<header class="home" id="home">
-		<nav>
-			<a href="index.html"><img src="images/reboot.png"></a>
+		<nav class = "mainNav">
+					<a href="index.html"><img src="images/reboot.png"></a>
 			<ul class="sub-menu">
-			<li class = "menuOpen" ><img src = "images/logo.png"/></li>
-				<li class = "menubtn"><a class="hvr-pulse" href="index.html">Home</a></li>
-				<li class = "menubtn"><a class="hvr-pulse" href="about.html">About Us</a></li>
-				<li class = "menubtn"><a class="hvr-pulse" href="join.html">Join the Club</a></li>
-				<li class = "menubtn"><a class="hvr-pulse" href="blog.html">Blog</a></li>
-				<li class = "menubtn"><a class="hvr-pulse" href="contact.html">Contact</a></li>
-				<li class = "menuClose"> <i class="fa fa-chevron-up" onclick="closeMenu()"></i></li>
+				<li><a class="hvr-pulse" href="index.html">Home</a></li>
+				<li><a class="hvr-pulse" href="about.html">About Us</a></li>
+				<li><a class="hvr-pulse" href="join.html">Join the Club</a></li>
+				<li><a class="hvr-pulse" href="blog.html">Blog</a></li>
+				<li><a class="hvr-pulse" href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<nav class = "mobileNav">
+					<a href="index.html"><img src="images/reboot.png"></a>
+					<img class = "menuOpen" src = "images/logo.png" onclick="openMenu()"/>
+			<ul class="sub-menu">
+
+				<li class = "collapsed mbtn"><a class="hvr-pulse" href="index.html">Home</a></li>
+				<li class = "collapsed mbtn"><a class="hvr-pulse" href="about.html">About Us</a></li>
+				<li class = "collapsed mbtn"><a class="hvr-pulse" href="join.html">Join the Club</a></li>
+				<li class = "collapsed mbtn"><a class="hvr-pulse" href="blog.html">Blog</a></li>
+				<li class = "collapsed mbtn"><a class="hvr-pulse" href="contact.html">Contact</a></li>
+				<li class = "collapsed mbtn"> <i class="fa fa-chevron-up" onclick="closeMenu()"></i></li>
 			</ul>
 		</nav>
 	</header>
+	<script>
+	function openMenu(){
+
+		var x = document.getElementsByClassName("mbtn");
+		for (i = 0; i < x.length; i++){
+
+			x[i].className = x[i].className.replace("collapsed","expanded");
+		}
+	}
+	function closeMenu(){
+		var x = document.getElementsByClassName("mbtn");
+		for (i = 0; i < x.length; i++){
+			x[i].className = x[i].className.replace("expanded","collapsed");
+		}
+	}
+	</script>
 	<section class="splash">
 		
 			<img class="logo" src="images/rebootlogomain.png"/>
