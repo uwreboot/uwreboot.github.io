@@ -676,7 +676,7 @@ div.Lcontent p:last-child{
 }
 
 .fb-share-button{
-    display: block;
+    display: block !important;
     text-align: center;
 }
 .tall{
