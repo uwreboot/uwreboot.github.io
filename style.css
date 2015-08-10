@@ -133,7 +133,6 @@ nav ul {
     right: 8px;
     color: #A29393;
 }
-
 .splash h1 {
     margin: auto;
     font-size: 20px;
@@ -773,7 +772,7 @@ div.Lcontent p:last-child{
 
 .thumb-cal p:first-child{
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 25px;
 }
 .thumb-cal p:last-child{
     font-size:40px;
