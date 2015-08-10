@@ -615,6 +615,10 @@ div.Lcontent p:last-child{
     color: #655;
     background-color: rgba(255,255,255,0.9);
 }
+.post a{
+    color:#000;
+    font-weight: bold;
+}
 
 .post h1 {
     font-family: "Istok Web";
@@ -629,7 +633,7 @@ div.Lcontent p:last-child{
 }
 
 .post p {
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .post h1, .post h2, .post h3, .post h4{
