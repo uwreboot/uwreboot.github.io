@@ -13,6 +13,17 @@
 	<script type="text/javascript" src="script.js" ></script> 
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="flickity-docs/flickity.pkgd.min.js"></script>
+<!-- For Facebook -->
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!--- End For Facebook  -->
+
 </head>
 <body class = "mainbg">
 	<header class="home" id="home">
@@ -89,6 +100,7 @@
 							<p class="center">Join the movement.
 							</br>
 							reboot the culture of creation</p>
+							<div class="fb-share-button" data-href="https://www.facebook.com/reboot.UW" data-layout="icon_link"></div>
 					</li>
 			</div>
 		</div>
