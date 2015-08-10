@@ -675,6 +675,10 @@ div.Lcontent p:last-child{
     float: right;
 }
 
+.fb-share-button{
+    display: block;
+    text-align: center;
+}
 .tall{
     width:30%;
 }
