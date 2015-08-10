@@ -21,7 +21,7 @@
 							beginning = "1"
 						}
 						var next = document.getElementById(beginning.concat(end));
-						if (Math.random()>0.999){		//One in a thousand chance...
+						if (Math.random()>0.99){		//One in a hundred chance...
 							next = document.getElementById("secret");
 						}
 						it.style.display="none";
