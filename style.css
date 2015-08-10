@@ -611,7 +611,7 @@ div.Lcontent p:last-child{
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 0px;
-    padding: 100px 115px 115px 115px;
+    padding: 60px 115px 115px 115px;
     color: #655;
     background-color: rgba(255,255,255,0.9);
 }
@@ -628,6 +628,10 @@ div.Lcontent p:last-child{
     text-align:center;
 }
 
+.post p {
+    font-size: 15px;
+}
+
 .post h1, .post h2, .post h3, .post h4{
     font-family:"Istok Web";
     margin:0;
@@ -635,9 +639,10 @@ div.Lcontent p:last-child{
     color: #655;
 }
 .post h1 {
-    font-size:18pt;
+    font-size: 18pt;
     text-transform: uppercase;
     letter-spacing: 5px;
+    margin: 60px 0px 0px 0px;
 }
 .post h2 {
     font-size:12pt;
@@ -653,10 +658,19 @@ div.Lcontent p:last-child{
     text-align: right;
     font-size:12pt;
     color:#CBB;
-    position: absolute;
+  /*  position: absolute;
     top: 50px;
-    right: 112px;
+    right: 112px;*/
 }
+
+.post h4.left {
+ float: left;   
+}
+
+.post h4.right {
+    float: right;
+}
+
 .tall{
     width:30%;
 }
